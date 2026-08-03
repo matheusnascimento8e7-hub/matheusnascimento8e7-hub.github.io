@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matheus Nascimento · Analista de BI · Portfólio</title>
+<meta name="description" content="Portfólio de Business Intelligence e Analytics: cases de Financeiro, RH, Logística, Marketing e Governança de Dados.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Matheus Nascimento · Analista de BI">
+<meta property="og:description" content="Portfólio de BI: cases de Financeiro, RH, Logística, Marketing e Governança de Dados.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script>
+/* Shim: substitui o support.js do editor. Renderiza cada bloco React
+   dentro do slot correspondente do HTML estatico, via portals. */
+class DCLogic extends React.Component {
+  render() {
+    var vals = this.renderVals ? this.renderVals() : {};
+    var kids = Object.keys(vals).map(function (k) {
+      var node = document.querySelector('[data-slot="' + k + '"]');
+      return node ? ReactDOM.createPortal(vals[k], node, k) : null;
+    });
+    return React.createElement(React.Fragment, null, kids);
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#1B1A19;color:#F3F2F1;font-family:'Segoe UI','Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:#6aa9ff;text-decoration:none}
+a:hover{color:#9cc4ff;text-decoration:underline}
+:focus-visible{outline:2px solid #118DFF;outline-offset:2px}
+::selection{background:#163a5f}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes growV{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes growH{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drawLine{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:scale(1)}}
+.cbar{transform:scaleY(0);transform-box:fill-box;transform-origin:bottom}
+.hbar{transform:scaleX(0);transform-box:fill-box;transform-origin:left}
+.cline{stroke-dasharray:1;stroke-dashoffset:1}
+.carea{opacity:0}
+.cdot{opacity:0}
+.cseg{opacity:0;transform:scale(.55);transform-box:fill-box;transform-origin:center}
+.ccell{opacity:0}
+.cfade{opacity:0}
+.chart-animate .cbar{animation:growV .8s cubic-bezier(.22,1,.36,1) forwards}
+.chart-animate .hbar{animation:growH .8s cubic-bezier(.22,1,.36,1) forwards}
+.chart-animate .cline{animation:drawLine 1.1s ease forwards}
+.chart-animate .carea{animation:fadeIn 1s ease .35s forwards}
+.chart-animate .cdot{animation:fadeIn .45s ease forwards}
+.chart-animate .cseg{animation:popIn .65s cubic-bezier(.22,1,.36,1) forwards}
+.chart-animate .ccell{animation:fadeIn .55s ease forwards}
+.chart-animate .cfade{animation:fadeIn .55s ease forwards}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.cbar,.hbar,.cseg{transform:none!important}.cline{stroke-dashoffset:0!important}.carea,.cdot,.ccell,.cfade{opacity:1!important}}
+</style>
+</head>
+<body>
+<main id="dc-root">
+
+
+<nav style="position:fixed;top:0;left:0;right:0;height:52px;z-index:50;background:rgba(15,14,13,0.96);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid rgba(255,255,255,0.08)">
+  <a href="#topo" style="color:#fff;font-weight:700;font-size:14px;letter-spacing:.01em;text-decoration:none">Matheus Nascimento<span style="color:#6aa9ff;font-weight:400"> · BI</span></a>
+  <div style="display:flex;gap:22px;align-items:center;font-size:12.5px">
+    <a href="#sobre" style="color:#A19F9D">Sobre</a>
+    <a href="#case-01" style="color:#A19F9D">Financeiro</a>
+    <a href="#case-02" style="color:#A19F9D">RH</a>
+    <a href="#case-03" style="color:#A19F9D">Logística</a>
+    <a href="#case-04" style="color:#A19F9D">Marketing</a>
+    <a href="#gov" style="color:#A19F9D">Governança</a>
+    <a href="#skills" style="color:#A19F9D">Skills</a>
+  </div>
+</nav>
+
+<header id="topo" style="max-width:1180px;margin:0 auto;padding:104px 24px 40px">
+  <div>
+  <div style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:.12em;color:#A19F9D;text-transform:uppercase;margin-bottom:14px">Analista de BI · Analista de Dados</div>
+  <h1 style="margin:0;font-size:clamp(34px,5vw,58px);font-weight:700;line-height:1.02;letter-spacing:-0.02em;color:#F3F2F1">Matheus Nascimento</h1>
+  <p style="margin:16px 0 0;max-width:640px;font-size:16px;line-height:1.5;color:#C8C6C4">Construo relatórios que fecham: do ETL ao dataset certificado.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+    <a href="https://www.linkedin.com/in/matheus-nascimento-51243a243" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:#118DFF;color:#fff;border-radius:2px;font-size:13px;font-weight:600">LinkedIn</a>
+    <a href="https://github.com/matheusnascimento8e7-hub" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:transparent;color:#F3F2F1;border:1px solid rgba(255,255,255,0.18);border-radius:2px;font-size:13px;font-weight:600">GitHub</a>
+    <a href="mailto:matheusnascimento8e7@gmail.com" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:transparent;color:#F3F2F1;border:1px solid rgba(255,255,255,0.18);border-radius:2px;font-size:13px;font-weight:600">E-mail</a>
+  </div>
+  </div>
+</header>
+
+<section id="sobre" style="max-width:1180px;margin:0 auto;padding:8px 24px 8px;scroll-margin-top:64px">
+  <div style="border:1px solid rgba(255,255,255,0.1);border-radius:2px;background:#1B1A19;padding:26px 26px 28px">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500;margin-bottom:10px">Apresentação</div>
+    <div style="display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap">
+    <img src="assets/perfil.png" onerror="this.style.display='none'" alt="Matheus Nascimento" style="flex:0 0 auto;width:180px;height:200px;object-fit:cover;object-position:center 22%;border-radius:2px;border:1px solid rgba(255,255,255,0.12);display:block" />
+    <p style="margin:0;flex:1 1 420px;min-width:280px;font-size:15px;line-height:1.65;color:#C8C6C4">Sou Analista de BI e trabalho para transformar dado bruto em decisão que o negócio consegue tomar com segurança. Atuo em todo o ciclo do dado: levanto a necessidade com a área, modelo o dado em star schema, construo o ETL/ELT, escrevo as medidas em DAX e publico o relatório já governado no Power BI Service. Meu foco não é entregar painel bonito, e sim relatório que a operação abre todo dia porque confia no número. Para isso, documento a regra de negócio, versiono o dataset, aplico segurança em nível de linha e defino o SLA de atualização, deixando cada indicador rastreável da fonte até o valor final. O resultado é menos retrabalho, menos planilha paralela e mais tempo da equipe gasto decidindo em vez de conferir dado.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:24px">
+      <div>
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Skills técnicas</div>
+        <div style="display:flex;flex-wrap:wrap;gap:7px">
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Power BI</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">DAX</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Power Query</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">SQL</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Modelagem dimensional</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">ETL/ELT</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Excel avançado</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Python (pandas)</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Automação</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">IA</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Governança de dados</span>
+          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Pipeline de dados</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Skills comportamentais</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#C8C6C4;line-height:1.4">
+          <div>Comunicação clara com áreas de negócio</div>
+          <div>Atenção a detalhe e consistência do número</div>
+          <div>Autonomia e organização por SLA</div>
+          <div>Curiosidade analítica, sempre questiono o dado</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Experiência</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#C8C6C4;line-height:1.4">
+          <div>Relatórios de produção nas áreas de Financeiro, RH, Logística e Marketing</div>
+          <div>Datasets certificados e governados no Power BI Service</div>
+          <div>Automação de ETL e atualização incremental D-1</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Como agrego</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#C8C6C4;line-height:1.4">
+          <div>Reduzo retrabalho com dado único e confiável</div>
+          <div>Encurto o tempo entre pergunta e resposta</div>
+          <div>Deixo a operação autônoma para decidir por dados</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main style="max-width:1180px;margin:0 auto;padding:0 24px 40px">
+
+  <section id="case-01" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 01 · Financeiro</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Onde a margem vazou?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">A Aurora Bebidas via a margem cair sem saber a causa. É uma distribuidora com 3 CDs, mix de 240 SKUs e desconto fora de controle.</p>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_fin" style="display:contents"></div></div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
+          <thead><tr>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+          </tr></thead>
+          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">2 fatos · 5 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por item de nota · dia</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">34</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">SQL Server · Protheus</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 06:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Confidencial</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+        <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Margem bruta</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Receita líquida menos CMV sobre a receita líquida.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">(Receita líquida − CMV) ÷ Receita líquida</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Controladoria</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Fretes, brindes e amostras não faturadas.</dd>
+        </dl>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Isolou perda de 3,6 p.p. de margem em três alavancas.</li>
+            <li style="margin-bottom:6px">Identificou desconto excessivo em 2 SKUs de alto giro.</li>
+            <li>Reduziu fechamento de margem de 4 dias para D-1.</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Modelei <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Vendas</code> no grão de item com Power Query e unpivot de impostos.</li>
+            <li style="margin-bottom:6px">Ponte de margem em DAX com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">CALCULATE</code> e <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SWITCH</code> por alavanca.</li>
+            <li style="margin-bottom:6px">Medidas de mix com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SUMMARIZE</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">D_Produto</code>.</li>
+            <li>Data bars condicionais na matriz por linha de produto.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-02" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 02 · Recursos Humanos</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Quem sai, quando sai e por quê?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">O Meridiano Varejo perdia gente sem enxergar o padrão. É uma rede de 42 lojas, com 1.842 colaboradores e rotatividade alta.</p>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_rh" style="display:contents"></div></div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
+          <thead><tr>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+          </tr></thead>
+          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">2 fatos · 4 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por evento de movimentação</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">28</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">SQL Server · Senior</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 06:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Restrito</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+        <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Turnover</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Média de admissões e desligamentos sobre o headcount médio.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">((Admissões + Desligamentos) ÷ 2) ÷ Headcount médio</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Recursos Humanos</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Transferências internas e estágios.</dd>
+        </dl>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Concentrou 61% das saídas no primeiro ano de casa.</li>
+            <li style="margin-bottom:6px">Expôs 3 gestores com turnover acima do dobro da meta.</li>
+            <li>Antecipou risco de absenteísmo por unidade e mês.</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Fato <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Movimentacao</code> com admissões e desligamentos por <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">merge</code> no Power Query.</li>
+            <li style="margin-bottom:6px">Headcount médio via <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">CALCULATE</code> + <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DATESINPERIOD</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">D_Calendario</code>.</li>
+            <li style="margin-bottom:6px">Faixa de tempo de casa com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SWITCH(TRUE())</code> em coluna calculada.</li>
+            <li>RLS por unidade do gestor com regra dinâmica.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-03" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 03 · Logística</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Qual rota custa mais do que entrega?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">A TransVale Log gastava mais nas rotas que rendiam menos. É uma transportadora regional, com 12 rotas fixas e frota de 68 veículos.</p>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_log" style="display:contents"></div></div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
+          <thead><tr>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+          </tr></thead>
+          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">2 fatos · 5 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por entrega</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">31</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">BigQuery · TMS</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 06:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Interno</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+        <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Custo por entrega</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Custo total da rota dividido pelas entregas concluídas.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">Custo total da rota ÷ Entregas concluídas</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Operações</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Entregas canceladas e devoluções.</dd>
+        </dl>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Flagrou 3 rotas com custo por entrega acima da receita.</li>
+            <li style="margin-bottom:6px">Ligou baixa ocupação de veículo a custo unitário alto.</li>
+            <li>Monitorou OTIF diário contra meta de 95%.</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Fato <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Entregas</code> ingerido do TMS via <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">BigQuery</code> em camada tratada.</li>
+            <li style="margin-bottom:6px">OTIF com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DIVIDE</code> de entregas no prazo e completas sobre o total.</li>
+            <li style="margin-bottom:6px">Ranking de custo por rota com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">RANKX</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">D_Rota</code>.</li>
+            <li>Semáforo por regra de meta na matriz de rotas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-04" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 04 · Marketing</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Qual canal sustenta a aquisição?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">A Nuvela Assinaturas não sabia qual canal sustentava o crescimento. É um clube com 26 mil assinantes ativos e 5 canais pagos.</p>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_mkt" style="display:contents"></div></div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
+          <thead><tr>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+          </tr></thead>
+          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">3 fatos · 4 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por sessão · canal · dia</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">26</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">BigQuery · GA4 · Meta Ads</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 07:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Interno</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+        <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">CAC</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Investimento em mídia dividido pelos novos clientes do período.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">Investimento em mídia ÷ Novos clientes</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Marketing</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Orgânico e indicações sem custo de mídia.</dd>
+        </dl>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Revelou canal com menor CAC e maior conversão.</li>
+            <li style="margin-bottom:6px">Corrigiu leitura de conversão com defasagem de 14 dias.</li>
+            <li>Mapeou o funil completo de sessão a pagante.</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+            <li style="margin-bottom:6px">Uni GA4 e Meta Ads por <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">merge</code> de canal e dia no Power Query.</li>
+            <li style="margin-bottom:6px">Conversão defasada com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">CALCULATE</code> + <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DATEADD</code> de 14 dias.</li>
+            <li style="margin-bottom:6px">CAC por canal com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DIVIDE</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Investimento</code>.</li>
+            <li>Funil com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SUMMARIZE</code> por etapa e canal.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gov" data-reveal style="padding:56px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Camada de governança</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Relatórios não são arquivos soltos.</h2>
+    <p style="margin:0 0 24px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">São ativos versionados, classificados e certificados. Cinco artefatos que provam a governança em vez de descrevê-la.</p>
+
+    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">1 · Linhagem de dados</div>
+      <div style="overflow-x:auto"><div data-slot="lineage" style="display:contents"></div></div>
+    </div>
+
+    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">2 · Dicionário de métricas</div>
+      <div style="overflow-x:auto"><div data-slot="dictionary" style="display:contents"></div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px" data-gov-grid>
+      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px">
+        <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">3 · Qualidade de dados · dimensões DAMA</div>
+        <div data-slot="dama" style="display:contents"></div>
+      </div>
+      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px">
+        <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">Regras de validação</div>
+        <div data-slot="rules" style="display:contents"></div>
+      </div>
+    </div>
+
+    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">4 · Matriz de acesso e sensibilidade</div>
+      <div style="overflow-x:auto"><div data-slot="access" style="display:contents"></div></div>
+      <div style="margin-top:12px;font-size:12px;color:#C8C6C4;line-height:1.5;border-left:2px solid #118DFF;padding-left:12px">LGPD · dado pessoal aparece somente agregado; identificador direto (CPF, matrícula) não é publicado em relatório.</div>
+    </div>
+
+    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">5 · Ciclo de vida e mudança</div>
+      <div style="overflow-x:auto"><div data-slot="lifecycle" style="display:contents"></div></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px" data-lc-grid>
+        <div style="font-size:12.5px;color:#C8C6C4;line-height:1.45"><span style="display:block;font-weight:700;color:#F3F2F1;margin-bottom:2px">Workspaces separados</span>DEV, HML e PRD isolados por ambiente.</div>
+        <div style="font-size:12.5px;color:#C8C6C4;line-height:1.45"><span style="display:block;font-weight:700;color:#F3F2F1;margin-bottom:2px">Definição versionada</span>Modelo exportado e versionado em Git.</div>
+        <div style="font-size:12.5px;color:#C8C6C4;line-height:1.45"><span style="display:block;font-weight:700;color:#F3F2F1;margin-bottom:2px">Registro de mudança</span>Toda alteração de métrica com data e motivo.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" data-reveal style="padding:56px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Competências técnicas</div>
+    <h2 style="margin:8px 0 22px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Stack</h2>
+    <div data-slot="skills" style="display:contents"></div>
+  </section>
+
+  <section data-reveal style="padding:48px 0 8px">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Como eu trabalho</div>
+    <h2 style="margin:8px 0 22px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Comportamentais</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:2px;overflow:hidden">
+      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Problema antes da ferramenta</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Mapeio a pergunta de negócio e o dado disponível antes de abrir o Power BI.</div></div>
+      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Regra de negócio em modelo</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Traduzo política de comissão e desconto em medidas DAX auditáveis.</div></div>
+      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Documentar para quem herda</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Deixo dicionário e linhagem para o próximo analista assumir sem mim.</div></div>
+      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Questionar o número que não fecha</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Rastreei divergência de 2,3% na receita até um join duplicando notas.</div></div>
+      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Autonomia como único analista</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Fui o único responsável por ETL, modelo, relatório e atendimento da área.</div></div>
+      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Comunicação com quem decide</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Apresento variação em p.p. e R$, não em jargão técnico, para a diretoria.</div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer style="border-top:1px solid rgba(255,255,255,0.08);background:#141312;color:#A19F9D;padding:28px 24px">
+  <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:12.5px">
+    <div>Matheus Nascimento · Analista de BI · Rio de Janeiro · <a href="mailto:matheusnascimento8e7@gmail.com" style="color:#6aa9ff">matheusnascimento8e7@gmail.com</a></div>
+    <div style="color:#7a7876">Empresas e dados dos cases são fictícios, criados apenas para demonstração.</div>
+  </div>
+</footer>
+</main>
+<script>
+class Component extends DCLogic {
+  S=['#3B82F6','#818CF8','#F59E0B','#A78BFA','#F472B6','#22D3EE','#FBBF24','#FB7185'];
+  POS='#34D399'; NEG='#FB7185'; GRID='#243244'; AXIS='#3A4A5E'; INK='#F3F2F1'; SUB='#A19F9D';
+  OUTER='#0D1017'; CANVAS='#121721'; PANEL='#18202C'; ALT='#1F2836'; SLIC='#161D28'; SLICA='#24303F'; EMPTY='#243244';
+  MONO="'Roboto Mono',monospace"; FONT="'Segoe UI','Open Sans',system-ui,sans-serif";
+  state={ tab:{ fin:'geral', rh:'geral', log:'geral', mkt:'geral' } };
+
+  componentDidMount(){
+    const tip=document.createElement('div');
+    Object.assign(tip.style,{position:'fixed',zIndex:9999,pointerEvents:'none',display:'none',background:'#0D1017',border:'1px solid #2C3B4F',borderRadius:'2px',padding:'8px 10px',font:"12px "+this.FONT,color:'#F3F2F1',boxShadow:'0 6px 20px rgba(0,0,0,0.55)',maxWidth:'260px',lineHeight:'1.35'});
+    document.body.appendChild(tip); this.tipEl=tip;
+    this.animateVisible=this.animateVisible.bind(this);
+    window.addEventListener('scroll',this.animateVisible,{passive:true});
+    window.addEventListener('resize',this.animateVisible,{passive:true});
+    [0,120,350,700,1200].forEach(d=>setTimeout(this.animateVisible,d));
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+    const nodes=document.querySelectorAll('[data-reveal]');
+    nodes.forEach(n=>{ n.style.opacity='0'; });
+    const io=new IntersectionObserver((ents)=>{
+      ents.forEach(e=>{ if(e.isIntersecting){ e.target.style.animation='rise .6s ease both'; e.target.style.opacity=''; io.unobserve(e.target); } });
+    },{threshold:0.08});
+    nodes.forEach(n=>io.observe(n));
+  }
+  componentDidUpdate(){ if(this.animateVisible) requestAnimationFrame(this.animateVisible); }
+  componentWillUnmount(){ if(this.animateVisible){window.removeEventListener('scroll',this.animateVisible);window.removeEventListener('resize',this.animateVisible);} }
+  animateVisible(){
+    const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const vh=window.innerHeight||document.documentElement.clientHeight;
+    document.querySelectorAll('.chartwrap').forEach(n=>{
+      const r=n.getBoundingClientRect();
+      if(r.height===0) return;
+      if(reduce){ n.classList.add('chart-animate'); return; }
+      const has=n.classList.contains('chart-animate');
+      const inView = r.top < vh*0.80 && r.bottom > vh*0.14;
+      const fullyOut = r.bottom < vh*0.02 || r.top > vh*0.98;
+      if(inView && !has){
+        n.classList.add('chart-animate');
+      } else if(fullyOut && has){
+        n.classList.remove('chart-animate');
+        void n.offsetWidth;
+      }
+    });
+  }
+
+  nf(n,d){ return Number(n).toLocaleString('pt-BR',{minimumFractionDigits:d||0,maximumFractionDigits:d||0}); }
+  setTab(rep,t){ this.setState(s=>({tab:Object.assign({},s.tab,{[rep]:t})})); }
+
+  mk(title,rows){ return {onMouseMove:e=>this.showTip(e,title,rows),onMouseLeave:()=>this.hideTip(),style:{cursor:'pointer'}}; }
+  showTip(e,title,rows){ const el=this.tipEl; if(!el)return;
+    let html='<div style="font-weight:600;margin-bottom:5px;color:#F3F2F1;font-family:'+this.FONT+'">'+title+'</div>';
+    rows.forEach(r=>{ html+='<div style="display:flex;align-items:center;gap:7px;margin-top:2px"><span style="width:8px;height:8px;border-radius:1px;flex:0 0 auto;background:'+(r[2]||'#8a8886')+'"></span><span style="color:#C8C6C4">'+r[0]+'</span><span style="margin-left:auto;padding-left:14px;font-variant-numeric:tabular-nums;font-weight:600;color:#F3F2F1">'+r[1]+'</span></div>'; });
+    el.innerHTML=html; el.style.display='block'; this.moveTip(e); }
+  moveTip(e){ const el=this.tipEl; if(!el)return; const pad=14, w=el.offsetWidth, hh=el.offsetHeight;
+    let x=e.clientX+pad, y=e.clientY+pad;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-pad;
+    if(y+hh>window.innerHeight-8) y=e.clientY-hh-pad;
+    el.style.left=Math.max(8,x)+'px'; el.style.top=Math.max(8,y)+'px'; }
+  hideTip(){ if(this.tipEl) this.tipEl.style.display='none'; }
+
+  svg(w,h,kids,label){
+    const inner=React.createElement('svg',{viewBox:'0 0 '+w+' '+h,preserveAspectRatio:'xMidYMid meet',width:'100%',height:'100%',role:'img','aria-label':label,style:{display:'block'}},kids);
+    return React.createElement('div',{className:'chartwrap',style:{width:'100%',aspectRatio:w+' / '+h,fontFamily:this.FONT}},inner);
+  }
+  icons(){
+    const h=React.createElement, C='#8a8886';
+    const mk=(k,p)=>React.createElement('svg',{key:k,width:13,height:13,viewBox:'0 0 16 16',style:{opacity:.85}},p);
+    const filter=mk('f',h('path',{d:'M2 3h12l-4.5 5.5V13L6.5 11V8.5L2 3z',fill:'none',stroke:C,strokeWidth:1.2,strokeLinejoin:'round'}));
+    const focus=mk('o',h('path',{d:'M2 6V2h4M14 6V2h-4M2 10v4h4M14 10v4h-4',fill:'none',stroke:C,strokeWidth:1.2}));
+    const more=h('div',{key:'m',style:{color:C,fontSize:15,lineHeight:'8px',letterSpacing:'1px',fontWeight:700}},'\u22ef');
+    return h('div',{style:{display:'flex',gap:7,alignItems:'center'}},[filter,focus,more]);
+  }
+  vbox(title,body){
+    const h=React.createElement;
+    return h('div',{style:{background:this.PANEL,border:'1px solid '+this.GRID,borderRadius:2,boxShadow:'0 1px 2px rgba(0,0,0,0.4)',display:'flex',flexDirection:'column',minWidth:0,overflow:'hidden'}},[
+      h('div',{key:'h',style:{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'7px 8px 5px'}},[
+        h('div',{key:'t',style:{fontSize:13,fontWeight:600,color:this.INK,lineHeight:1.1}},title),
+        this.icons()
+      ]),
+      h('div',{key:'b',style:{padding:'0 8px 8px'}},body)
+    ]);
+  }
+
+  colChart(data,o){o=o||{};
+    const h=React.createElement, W=360,H=210,l=12,r=10,t=26,b=30, iw=W-l-r, ih=H-t-b;
+    const mx=o.max||Math.max.apply(null,data.map(d=>d.v))*1.18, n=data.length, step=iw/n, bw=Math.min(step*0.55,50), k=[];
+    for(let g=0;g<=4;g++){const y=t+ih*g/4;k.push(h('line',{key:'g'+g,x1:l,x2:W-r,y1:y,y2:y,stroke:this.GRID,strokeWidth:.6}));}
+    data.forEach((d,i)=>{const bh=ih*d.v/mx,x=l+step*i+(step-bw)/2,y=t+ih-bh;
+      k.push(h('rect',Object.assign({key:'b'+i,x:x,y:y,width:bw,height:bh,fill:this.S[(o.ci!=null?o.ci:0)],className:'cbar'},this.mk(d.l,[[o.tip||'Valor',o.fmt?o.fmt(d.v):this.nf(d.v),this.S[(o.ci!=null?o.ci:0)]]]),{style:{cursor:'pointer',animationDelay:(i*0.06)+'s'}})));
+      k.push(h('text',{key:'v'+i,x:x+bw/2,y:y-4,textAnchor:'middle',fontSize:9,fill:this.SUB,fontWeight:600,className:'cfade',style:{animationDelay:(i*0.06+0.4)+'s'}},o.fmt?o.fmt(d.v):this.nf(d.v)));
+      k.push(h('text',{key:'x'+i,x:x+bw/2,y:H-10,textAnchor:'middle',fontSize:10,fill:this.SUB},d.l));
+    });
+    k.push(h('line',{key:'ax',x1:l,x2:W-r,y1:t+ih,y2:t+ih,stroke:this.AXIS,strokeWidth:1}));
+    return this.svg(W,H,k,o.label||'Gr\u00e1fico de colunas');
+  }
+
+  barChart(data,o){o=o||{};
+    const h=React.createElement, W=360,H=210,l=116,r=48,t=6,b=6, iw=W-l-r, rows=data.length, av=H-t-b, rowh=av/rows, k=[];
+    const sorted=o.nosort?data:data.slice().sort((a,c)=>c.v-a.v);
+    const mx=Math.max.apply(null,sorted.map(d=>d.v))*1.02;
+    sorted.forEach((d,i)=>{const cy=t+i*rowh, barH=Math.min(rowh-10,24), y=cy+(rowh-barH)/2, bw=iw*d.v/mx;
+      k.push(h('text',{key:'l'+i,x:l-8,y:cy+rowh/2,textAnchor:'end',dominantBaseline:'middle',fontSize:10.5,fill:this.SUB},d.l));
+      k.push(h('rect',Object.assign({key:'b'+i,x:l,y:y,width:bw,height:barH,fill:this.S[(o.ci!=null?o.ci:0)],className:'hbar'},this.mk(d.l,[[o.tip||'Valor',o.fmt?o.fmt(d.v):this.nf(d.v),this.S[(o.ci!=null?o.ci:0)]]]),{style:{cursor:'pointer',animationDelay:(i*0.06)+'s'}})));
+      k.push(h('text',{key:'v'+i,x:l+bw+5,y:cy+rowh/2,dominantBaseline:'middle',fontSize:10,fill:this.SUB,fontWeight:600,className:'cfade',style:{animationDelay:(i*0.06+0.4)+'s'}},o.fmt?o.fmt(d.v):this.nf(d.v)));
+    });
+    return this.svg(W,H,k,o.label||'Gr\u00e1fico de barras');
+  }
+
+  lineChart(data,o){o=o||{};
+    const h=React.createElement, W=(o.wide?760:360),H=(o.wide?205:210),l=34,r=14,t=18,b=28, iw=W-l-r, ih=H-t-b;
+    const vals=data.map(d=>d.v).concat(o.target?[o.target]:[]);
+    const mn=o.min!=null?o.min:Math.min.apply(null,vals)*0.96, mx=o.max!=null?o.max:Math.max.apply(null,vals)*1.04, rng=mx-mn||1, n=data.length, step=iw/(n-1), k=[];
+    for(let g=0;g<=4;g++){const y=t+ih*g/4;k.push(h('line',{key:'g'+g,x1:l,x2:W-r,y1:y,y2:y,stroke:this.GRID,strokeWidth:.6}));
+      k.push(h('text',{key:'yl'+g,x:l-5,y:y+3,textAnchor:'end',fontSize:8.5,fill:this.SUB},o.yfmt?o.yfmt(mx-(mx-mn)*g/4):this.nf(mx-(mx-mn)*g/4,1)));}
+    const px=i=>l+step*i, py=v=>t+ih-ih*(v-mn)/rng;
+    if(o.target!=null){const y=py(o.target);k.push(h('line',{key:'tg',x1:l,x2:W-r,y1:y,y2:y,stroke:this.SUB,strokeDasharray:'4 3',strokeWidth:1}));
+      k.push(h('text',{key:'tgl',x:W-r,y:y-3,textAnchor:'end',fontSize:8.5,fill:this.SUB},'meta '+(o.tfmt?o.tfmt(o.target):this.nf(o.target,1))));}
+    let dd='';data.forEach((d,i)=>{dd+=(i?'L':'M')+px(i)+' '+py(d.v)+' ';});
+    k.push(h('path',{key:'ln',d:dd,fill:'none',stroke:this.S[(o.ci!=null?o.ci:0)],strokeWidth:2,strokeLinejoin:'round',strokeLinecap:'round',pathLength:1,className:'cline'}));
+    data.forEach((d,i)=>{k.push(h('circle',{key:'m'+i,cx:px(i),cy:py(d.v),r:2.6,fill:this.PANEL,stroke:this.S[(o.ci!=null?o.ci:0)],strokeWidth:1.5,className:'cdot',style:{animationDelay:(0.9+i*0.03)+'s'}}));
+      k.push(h('circle',Object.assign({key:'h'+i,cx:px(i),cy:py(d.v),r:9,fill:'transparent'},this.mk(d.l,[[o.tip||'Valor',(o.yfmt?o.yfmt(d.v):this.nf(d.v,1)),this.S[(o.ci!=null?o.ci:0)]]]))));
+      k.push(h('text',{key:'x'+i,x:px(i),y:H-9,textAnchor:'middle',fontSize:9,fill:this.SUB},d.l));});
+    return this.svg(W,H,k,o.label||'Gr\u00e1fico de linhas');
+  }
+
+  areaChart(data,o){o=o||{};
+    const h=React.createElement, W=360,H=210,l=32,r=12,t=18,b=28, iw=W-l-r, ih=H-t-b;
+    const mx=o.max||Math.max.apply(null,data.map(d=>d.v))*1.1, n=data.length, step=iw/(n-1), k=[];
+    for(let g=0;g<=4;g++){const y=t+ih*g/4;k.push(h('line',{key:'g'+g,x1:l,x2:W-r,y1:y,y2:y,stroke:this.GRID,strokeWidth:.6}));
+      k.push(h('text',{key:'yl'+g,x:l-5,y:y+3,textAnchor:'end',fontSize:8.5,fill:this.SUB},this.nf(mx-mx*g/4)+(o.suffix||'')));}
+    const px=i=>l+step*i, py=v=>t+ih-ih*v/mx;
+    let dd='M'+px(0)+' '+py(data[0].v)+' ';data.forEach((d,i)=>{if(i)dd+='L'+px(i)+' '+py(d.v)+' ';});
+    const fillPath=dd+'L'+px(n-1)+' '+(t+ih)+' L'+px(0)+' '+(t+ih)+' Z';
+    k.push(h('path',{key:'ar',d:fillPath,fill:this.S[(o.ci!=null?o.ci:0)],fillOpacity:.22,className:'carea'}));
+    k.push(h('path',{key:'ln',d:dd,fill:'none',stroke:this.S[(o.ci!=null?o.ci:0)],strokeWidth:2,pathLength:1,className:'cline'}));
+    data.forEach((d,i)=>{k.push(h('circle',Object.assign({key:'h'+i,cx:px(i),cy:py(d.v),r:9,fill:'transparent'},this.mk(d.l,[[o.tip||'Valor',this.nf(d.v)+(o.suffix||''),this.S[(o.ci!=null?o.ci:0)]]]))));
+      k.push(h('text',{key:'x'+i,x:px(i),y:H-9,textAnchor:'middle',fontSize:9,fill:this.SUB},d.l));});
+    return this.svg(W,H,k,o.label||'Gr\u00e1fico de \u00e1rea');
+  }
+
+  comboChart(cols,line,o){o=o||{};
+    const h=React.createElement, W=760,H=230,l=38,r=44,t=22,b=32, iw=W-l-r, ih=H-t-b;
+    const LC=o.lineColor||'#A3E635';
+    const cmx=Math.max.apply(null,cols.map(d=>d.v))*1.18, lmx=Math.max.apply(null,line)*1.12, lmn=Math.min.apply(null,line)*0.85, lrng=(lmx-lmn)||1;
+    const n=cols.length, step=iw/n, bw=Math.min(step*0.5,40), k=[];
+    for(let g=0;g<=4;g++){const y=t+ih*g/4;k.push(h('line',{key:'g'+g,x1:l,x2:W-r,y1:y,y2:y,stroke:this.GRID,strokeWidth:.6}));
+      k.push(h('text',{key:'yl'+g,x:l-5,y:y+3,textAnchor:'end',fontSize:8.5,fill:this.SUB},this.nf(cmx-cmx*g/4,0)));
+      k.push(h('text',{key:'yr'+g,x:W-r+5,y:y+3,textAnchor:'start',fontSize:8.5,fill:LC},this.nf(lmx-(lmx-lmn)*g/4,0)+'%'));}
+    cols.forEach((d,i)=>{const bh=ih*d.v/cmx,x=l+step*i+(step-bw)/2,y=t+ih-bh;
+      k.push(h('rect',Object.assign({key:'b'+i,x:x,y:y,width:bw,height:bh,fill:this.S[0],className:'cbar'},this.mk(d.l,[[o.barTip||'Valor',this.nf(d.v,1),this.S[0]]]),{style:{cursor:'pointer',animationDelay:(i*0.06)+'s'}})));
+      k.push(h('text',{key:'x'+i,x:l+step*i+step/2,y:H-10,textAnchor:'middle',fontSize:9.5,fill:this.SUB},d.l));});
+    const px=i=>l+step*i+step/2, py=v=>t+ih-ih*(v-lmn)/lrng;
+    let dd='';line.forEach((v,i)=>{dd+=(i?'L':'M')+px(i)+' '+py(v)+' ';});
+    k.push(h('path',{key:'ln',d:dd,fill:'none',stroke:LC,strokeWidth:2,pathLength:1,className:'cline'}));
+    line.forEach((v,i)=>{k.push(h('circle',{key:'m'+i,cx:px(i),cy:py(v),r:2.6,fill:this.PANEL,stroke:LC,strokeWidth:1.5,className:'cdot',style:{animationDelay:(0.9+i*0.04)+'s'}}));
+      k.push(h('circle',Object.assign({key:'h'+i,cx:px(i),cy:py(v),r:9,fill:'transparent'},this.mk(cols[i].l,[[o.lineTip||'Margem',this.nf(v,1)+'%',LC]]))));
+      k.push(h('text',{key:'lv'+i,x:px(i),y:py(v)-6,textAnchor:'middle',fontSize:8.5,fill:LC,fontWeight:600,className:'cfade',style:{animationDelay:(1.0+i*0.04)+'s'}},this.nf(v,1)+'%'));});
+    return this.svg(W,H,k,o.label||'Gr\u00e1fico combinado');
+  }
+
+  waterfall(steps,o){o=o||{};
+    const h=React.createElement, W=760,H=215,l=16,r=12,t=24,b=36, iw=W-l-r, ih=H-t-b;
+    let cum=0; const pts=[]; let lo=Infinity,hi=-Infinity;
+    steps.forEach(s=>{ if(s.total){pts.push({label:s.label,val:s.v,total:true}); lo=Math.min(lo,0);hi=Math.max(hi,s.v);}
+      else {const start=cum; cum+=s.v; pts.push({label:s.label,base:Math.min(start,cum),val:Math.abs(s.v),delta:s.v}); lo=Math.min(lo,start,cum);hi=Math.max(hi,start,cum);} });
+    lo=Math.min(lo,0); const rng=(hi-lo)*1.14||1, n=pts.length, step=iw/n, bw=Math.min(step*0.56,60), k=[];
+    for(let g=0;g<=4;g++){const y=t+ih*g/4;k.push(h('line',{key:'g'+g,x1:l,x2:W-r,y1:y,y2:y,stroke:this.GRID,strokeWidth:.6}));}
+    const py=v=>t+ih-ih*(v-lo)/rng;
+    pts.forEach((p,i)=>{const x=l+step*i+(step-bw)/2; let y,hh,col;
+      if(p.total){y=py(p.val);hh=py(0)-py(p.val);col=this.S[0];}
+      else {const top=p.base+p.val;y=py(top);hh=py(p.base)-py(top);col=p.delta>=0?this.POS:this.NEG;}
+      const lab=p.total?this.nf(p.val,1):(p.delta>=0?'+':'')+this.nf(p.delta,1);
+      k.push(h('rect',Object.assign({key:'b'+i,x:x,y:y,width:bw,height:Math.max(hh,1),fill:col,className:'cbar'},this.mk(p.label,[[p.total?'Margem':'Variação',lab+' p.p.',col]]),{style:{cursor:'pointer',animationDelay:(i*0.07)+'s'}})));
+      k.push(h('text',{key:'v'+i,x:x+bw/2,y:y-4,textAnchor:'middle',fontSize:9.5,fill:this.INK,fontWeight:600,className:'cfade',style:{animationDelay:(i*0.07+0.45)+'s'}},lab));
+      k.push(h('text',{key:'x'+i,x:x+bw/2,y:H-12,textAnchor:'middle',fontSize:9.5,fill:this.SUB},p.label));});
+    return this.svg(W,H,k,o.label||'Gr\u00e1fico de cascata');
+  }
+
+  donut(data,o){o=o||{};
+    const h=React.createElement, size=176, cx=88,cy=88, R=68, rin=41;
+    const tot=data.reduce((s,d)=>s+d.v,0); let ang=-Math.PI/2; const k=[];
+    const arc=(a0,a1)=>{const x0=cx+R*Math.cos(a0),y0=cy+R*Math.sin(a0),x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1);
+      const xi0=cx+rin*Math.cos(a0),yi0=cy+rin*Math.sin(a0),xi1=cx+rin*Math.cos(a1),yi1=cy+rin*Math.sin(a1);
+      const laf=(a1-a0)>Math.PI?1:0; return 'M'+x0+' '+y0+' A'+R+' '+R+' 0 '+laf+' 1 '+x1+' '+y1+' L'+xi1+' '+yi1+' A'+rin+' '+rin+' 0 '+laf+' 0 '+xi0+' '+yi0+' Z';};
+    data.forEach((d,i)=>{const a1=ang+2*Math.PI*d.v/tot;k.push(h('path',Object.assign({key:'s'+i,d:arc(ang,a1),fill:this.S[i%this.S.length],stroke:this.PANEL,strokeWidth:1,className:'cseg'},this.mk(d.l,[[o.tip||'Participação',this.nf(100*d.v/tot,1)+'%',this.S[i%this.S.length]]]),{style:{cursor:'pointer',animationDelay:(i*0.09)+'s'}})));ang=a1;});
+    const svg=h('svg',{key:'d',viewBox:'0 0 '+size+' '+size,width:'100%',height:'100%',preserveAspectRatio:'xMidYMid meet',role:'img','aria-label':o.label||'Gr\u00e1fico de rosca',style:{maxWidth:176}},
+      k.concat([h('text',{key:'c1',x:cx,y:cy-2,textAnchor:'middle',fontSize:15,fontWeight:600,fill:this.INK},o.center||''),
+                h('text',{key:'c2',x:cx,y:cy+14,textAnchor:'middle',fontSize:8.5,fill:this.SUB},o.centerLabel||'')]));
+    const legend=h('div',{key:'lg',style:{display:'flex',flexDirection:'column',gap:7,justifyContent:'center',minWidth:0,flex:1}},
+      data.map((d,i)=>h('div',{key:'li'+i,style:{display:'flex',alignItems:'center',gap:6,fontSize:11,color:this.SUB}},[
+        h('span',{key:'sw',style:{width:9,height:9,borderRadius:1,background:this.S[i%this.S.length],flex:'0 0 auto'}}),
+        h('span',{key:'n',style:{color:this.INK}},d.l),
+        h('span',{key:'v',style:{marginLeft:'auto',fontVariantNumeric:'tabular-nums'}},this.nf(100*d.v/tot,1)+'%')
+      ])));
+    return h('div',{className:'chartwrap',style:{display:'flex',gap:16,alignItems:'center',width:'100%',aspectRatio:'360 / 200'}},[svg,legend]);
+  }
+
+  heatmap(rows,cols,vals,o){o=o||{};
+    const h=React.createElement, cw=56,ch=28, lw=92, th=22, W=lw+cols.length*cw, H=th+rows.length*ch;
+    const flat=[].concat.apply([],vals), mn=Math.min.apply(null,flat), mx=Math.max.apply(null,flat), rng=(mx-mn)||1, k=[];
+    const c0=[38,52,66], c1=[17,141,255];
+    const col=v=>{const tt=(v-mn)/rng;const r=Math.round(c0[0]+(c1[0]-c0[0])*tt),g=Math.round(c0[1]+(c1[1]-c0[1])*tt),b2=Math.round(c0[2]+(c1[2]-c0[2])*tt);return 'rgb('+r+','+g+','+b2+')';};
+    cols.forEach((c,j)=>k.push(h('text',{key:'c'+j,x:lw+cw*j+cw/2,y:th-7,textAnchor:'middle',fontSize:9.5,fill:this.SUB},c)));
+    rows.forEach((rw,i)=>{k.push(h('text',{key:'r'+i,x:lw-8,y:th+ch*i+ch/2,textAnchor:'end',dominantBaseline:'middle',fontSize:10,fill:this.SUB},rw));
+      cols.forEach((c,j)=>{const v=vals[i][j];k.push(h('rect',Object.assign({key:'x'+i+'_'+j,x:lw+cw*j+1,y:th+ch*i+1,width:cw-2,height:ch-2,fill:col(v),stroke:this.PANEL,strokeWidth:1,className:'ccell'},this.mk(rows[i]+' · '+cols[j],[[o.tip||'Valor',this.nf(v,1)+'%',col(v)]]),{style:{cursor:'pointer',animationDelay:((i+j)*0.05)+'s'}})));
+        k.push(h('text',{key:'t'+i+'_'+j,x:lw+cw*j+cw/2,y:th+ch*i+ch/2,textAnchor:'middle',dominantBaseline:'middle',fontSize:9.5,fill:this.INK,fontWeight:600,className:'cfade',style:{animationDelay:((i+j)*0.05+0.3)+'s'}},this.nf(v,1)+'%'));});});
+    return this.svg(W,H,k,o.label||'Mapa de calor');
+  }
+
+  matrix(cols,rows,total){
+    const h=React.createElement, sub=this.SUB, ink=this.INK;
+    const th=cols.map((c,i)=>h('th',{key:'h'+i,style:{textAlign:c.align||'left',padding:'0 8px 5px',fontSize:10,letterSpacing:'.04em',textTransform:'uppercase',color:sub,fontWeight:600,borderBottom:'1.5px solid '+this.AXIS,whiteSpace:'nowrap'}},c.label));
+    const body=rows.map((r,ri)=>h('tr',{key:'r'+ri,style:{background:ri%2?this.ALT:this.PANEL}},
+      cols.map((c,ci)=>{const cell=r[c.k];
+        if(c.bar){const pct=Math.max(2,Math.min(100,100*(cell/c.barMax)));
+          return h('td',{key:c.k,style:{padding:'5px 8px',position:'relative',minWidth:96}},[
+            h('div',{key:'bar',style:{position:'absolute',left:8,top:'50%',transform:'translateY(-50%)',height:14,width:'calc('+pct+'% - 16px)',background:this.S[0],opacity:.32,borderRadius:1}}),
+            h('span',{key:'t',style:{position:'relative',fontSize:12,fontVariantNumeric:'tabular-nums',color:ink}},c.fmt?c.fmt(cell):this.nf(cell))]);}
+        if(c.arrow){const pos=cell>=0;return h('td',{key:c.k,style:{padding:'5px 8px',textAlign:'right',fontSize:12,fontVariantNumeric:'tabular-nums',color:pos?this.POS:this.NEG,whiteSpace:'nowrap'}},(pos?'\u25B2 +':'\u25BC ')+this.nf(Math.abs(cell),1)+(c.pp?' p.p.':'%'));}
+        if(c.sem){const map={g:this.POS,y:this.S[6],r:this.NEG};return h('td',{key:c.k,style:{padding:'5px 8px',textAlign:'center'}},h('span',{style:{display:'inline-block',width:10,height:10,borderRadius:'50%',background:map[cell]}}));}
+        return h('td',{key:c.k,style:{padding:'5px 8px',textAlign:c.align||'left',fontSize:12,fontVariantNumeric:c.num?'tabular-nums':'normal',color:ci===0?ink:sub,fontWeight:ci===0?600:400,whiteSpace:'nowrap'}},c.fmt?c.fmt(cell):cell);
+      })));
+    let totalRow=null;
+    if(total){totalRow=h('tr',{key:'tot',style:{borderTop:'1.5px solid '+this.AXIS}},cols.map((c,ci)=>{
+      const cell=total[c.k];
+      if(c.arrow&&cell!=null){const pos=cell>=0;return h('td',{key:c.k,style:{padding:'6px 8px',textAlign:'right',fontSize:12,fontWeight:700,color:pos?this.POS:this.NEG,fontVariantNumeric:'tabular-nums'}},(pos?'\u25B2 +':'\u25BC ')+this.nf(Math.abs(cell),1)+(c.pp?' p.p.':'%'));}
+      return h('td',{key:c.k,style:{padding:'6px 8px',textAlign:c.align||'left',fontSize:12,fontWeight:700,color:ink,fontVariantNumeric:c.num||c.bar?'tabular-nums':'normal'}},cell==null?'':(c.fmt?c.fmt(cell):cell));}));}
+    return h('div',{style:{overflowX:'auto'}},h('table',{style:{width:'100%',borderCollapse:'collapse',fontFamily:this.FONT}},[
+      h('thead',{key:'th'},h('tr',null,th)), h('tbody',{key:'tb'},total?body.concat([totalRow]):body)]));
+  }
+
+  slicer(label,val,active,date){
+    const h=React.createElement;
+    if(date){return h('div',{style:{display:'flex',alignItems:'center',gap:6,height:28,padding:'0 9px',background:this.SLIC,border:'1px solid '+this.GRID,borderRadius:2,fontSize:11,color:this.INK}},[
+      h('span',{key:'a',style:{color:this.SUB}},date[0]),h('span',{key:'d',style:{color:this.AXIS}},'\u2014'),h('span',{key:'b',style:{color:this.SUB}},date[1])]);}
+    return h('div',{style:{display:'flex',alignItems:'center',gap:8,height:28,padding:'0 9px',background:active?this.SLICA:this.SLIC,border:'1px solid '+this.GRID,borderRadius:2,fontSize:11,color:this.INK,fontWeight:active?600:400}},[
+      h('span',{key:'l',style:{color:this.SUB,fontWeight:400}},label+':'),h('span',{key:'v'},val),h('span',{key:'c',style:{marginLeft:2,color:this.SUB,fontSize:12}},'\u2304')]);
+  }
+  kpi(c){
+    const h=React.createElement, pos=c.dir!=='down';
+    return h('div',{style:{background:this.PANEL,border:'1px solid '+this.GRID,borderRadius:2,boxShadow:'0 1px 2px rgba(0,0,0,0.4)',padding:'10px 12px',minWidth:0}},[
+      h('div',{key:'v',style:{fontSize:34,fontWeight:600,color:this.INK,lineHeight:1,fontVariantNumeric:'tabular-nums'}},c.value),
+      h('div',{key:'l',style:{fontSize:11,color:this.SUB,marginTop:4}},c.label),
+      h('div',{key:'d',style:{fontSize:11,marginTop:5,color:pos?this.POS:this.NEG,fontVariantNumeric:'tabular-nums'}},(pos?'\u25B2 ':'\u25BC ')+c.delta)
+    ]);
+  }
+  shell(rep,name,updated,slicers,cards,tabs,body){
+    const h=React.createElement;
+    return h('div',{style:{background:this.OUTER,borderRadius:2,padding:6,minWidth:900,fontFamily:this.FONT}},[
+      h('div',{key:'canvas',style:{background:this.CANVAS,border:'1px solid '+this.GRID}},[
+        h('div',{key:'top',style:{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'9px 12px',borderBottom:'1px solid '+this.GRID}},[
+          h('div',{key:'n',style:{fontSize:13,fontWeight:600,color:this.INK}},name),
+          h('div',{key:'u',style:{fontSize:10,color:this.SUB}},'Atualizado em '+updated)]),
+        h('div',{key:'sl',style:{display:'flex',flexWrap:'wrap',gap:8,padding:'10px 12px',borderBottom:'1px solid '+this.GRID}},slicers),
+        h('div',{key:'kp',style:{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:8,padding:'10px 12px'}},cards),
+        h('div',{key:'bd',style:{padding:'0 12px 12px'}},body),
+        h('div',{key:'tb',style:{display:'flex',gap:0,background:this.OUTER,borderTop:'1px solid '+this.GRID,padding:'0 8px'}},
+          tabs.map((t,i)=>h('button',{key:'t'+i,onClick:()=>this.setTab(rep,t.k),style:{border:'none',cursor:'pointer',padding:'7px 14px',fontSize:11,fontFamily:this.FONT,background:t.active?this.CANVAS:'transparent',color:t.active?this.INK:this.SUB,fontWeight:t.active?600:400,borderTop:t.active?'2px solid '+this.S[0]:'2px solid transparent',marginTop:-1}},t.label)))
+      ])
+    ]);
+  }
+
+  vis2(a,b){const h=React.createElement;return h('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}},[h('div',{key:0},a),h('div',{key:1},b)]);}
+  visFull(el){const h=React.createElement;return h('div',{style:{marginTop:8}},el);}
+
+  damaTable(dims){
+    const h=React.createElement;
+    const sem=(v,m)=>v>=m?'g':(v>=m-2?'y':'r'), map={g:this.POS,y:this.S[6],r:this.NEG};
+    const rows=dims.map((d,i)=>{const s=sem(d.v,d.m);
+      return h('tr',{key:'r'+i,style:{background:i%2?this.ALT:this.PANEL}},[
+        h('td',{key:'d',style:{padding:'6px 8px',fontSize:12.5,color:this.INK,fontWeight:600}},d.l),
+        h('td',{key:'v',style:{padding:'6px 8px',textAlign:'right',fontSize:12.5,fontVariantNumeric:'tabular-nums',color:this.INK}},this.nf(d.v,1)+'%'),
+        h('td',{key:'m',style:{padding:'6px 8px',textAlign:'right',fontSize:12.5,fontVariantNumeric:'tabular-nums',color:this.SUB}},this.nf(d.m,0)+'%'),
+        h('td',{key:'s',style:{padding:'6px 8px',textAlign:'center'}},h('span',{style:{display:'inline-block',width:11,height:11,borderRadius:'50%',background:map[s]}}))
+      ]);});
+    return h('table',{style:{width:'100%',borderCollapse:'collapse',fontFamily:this.FONT}},[
+      h('thead',{key:'h'},h('tr',null,['Dimens\u00e3o','Atual','Meta','\u25CF'].map((c,i)=>h('th',{key:i,style:{textAlign:i===0?'left':i===3?'center':'right',padding:'0 8px 6px',fontSize:10,letterSpacing:'.04em',textTransform:'uppercase',color:this.SUB,fontWeight:600,borderBottom:'1.5px solid '+this.AXIS}},c)))),
+      h('tbody',{key:'b'},rows)]);
+  }
+
+  quality(cq){
+    const h=React.createElement;
+    return h('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}},[
+      this.vbox('Scorecard de qualidade \u00b7 DAMA',h('div',{style:{paddingTop:6}},this.damaTable(cq.dims))),
+      this.vbox('Regras de valida\u00e7\u00e3o',h('div',{style:{paddingTop:8,display:'flex',flexDirection:'column',gap:9}},
+        cq.rules.map((r,i)=>h('div',{key:i,style:{display:'flex',alignItems:'baseline',gap:8,fontSize:11.5}},[
+          h('span',{key:'t',style:{flex:1,color:this.INK,lineHeight:1.35}},r.t),
+          h('span',{key:'p',style:{fontVariantNumeric:'tabular-nums',fontWeight:600,color:r.p>=r.min?this.POS:this.NEG}},this.nf(r.p,1)+'%')]))))
+    ]);
+  }
+
+  lineage(){
+    const h=React.createElement, steps=[
+      {t:'Fonte',tech:'SQL Server \u00b7 GA4'},{t:'Ingest\u00e3o',tech:'Python / pandas'},{t:'Camada tratada',tech:'BigQuery'},{t:'Modelo sem\u00e2ntico',tech:'Power BI Dataset'},{t:'Relat\u00f3rio',tech:'Power BI Report'}];
+    const W=900,H=96, bw=150,bh=44,gap=(W-bw*5)/4, k=[];
+    steps.forEach((s,i)=>{const x=i*(bw+gap),y=16;
+      k.push(h('rect',{key:'r'+i,x:x,y:y,width:bw,height:bh,fill:i===4?'rgba(58,160,255,0.14)':this.SLIC,stroke:i===4?this.S[0]:this.GRID,strokeWidth:i===4?1.4:1}));
+      k.push(h('text',{key:'t'+i,x:x+bw/2,y:y+20,textAnchor:'middle',fontSize:12.5,fontWeight:600,fill:this.INK},s.t));
+      k.push(h('text',{key:'te'+i,x:x+bw/2,y:y+35,textAnchor:'middle',fontSize:9.5,fill:this.SUB,fontFamily:this.MONO},s.tech));
+      if(i<4){const ax=x+bw+2,ay=y+bh/2;k.push(h('line',{key:'a'+i,x1:ax,x2:ax+gap-4,y1:ay,y2:ay,stroke:this.SUB,strokeWidth:1}));
+        k.push(h('path',{key:'ah'+i,d:'M'+(ax+gap-4)+' '+ay+' l-5 -3 v6 z',fill:this.SUB}));}
+    });
+    return h('div',{style:{minWidth:820}},this.svg(W,H,k,'Diagrama de linhagem de dados'));
+  }
+  lifecycle(){
+    const h=React.createElement, steps=['Desenvolvimento','Homologa\u00e7\u00e3o','Produ\u00e7\u00e3o','Monitoramento'];
+    const W=900,H=64, bw=196,bh=40,gap=(W-bw*4)/3, k=[];
+    steps.forEach((s,i)=>{const x=i*(bw+gap),y=12;
+      k.push(h('rect',{key:'r'+i,x:x,y:y,width:bw,height:bh,rx:2,fill:i===2?this.S[0]:this.SLICA,stroke:i===2?this.S[0]:this.GRID}));
+      k.push(h('text',{key:'t'+i,x:x+bw/2,y:y+bh/2+4,textAnchor:'middle',fontSize:12.5,fontWeight:600,fill:i===2?'#08243f':this.INK},s));
+      if(i<3){const ax=x+bw+1,ay=y+bh/2;k.push(h('line',{key:'a'+i,x1:ax,x2:ax+gap-3,y1:ay,y2:ay,stroke:this.SUB,strokeWidth:1}));
+        k.push(h('path',{key:'ah'+i,d:'M'+(ax+gap-3)+' '+ay+' l-5 -3 v6 z',fill:this.SUB}));}});
+    return h('div',{style:{minWidth:760}},this.svg(W,H,k,'Ciclo de vida do relat\u00f3rio'));
+  }
+
+  dictionary(){
+    const h=React.createElement;
+    const chip=(t)=>{const m={c:['rgba(85,185,106,0.16)','#7fd69a','Certificada'],r:['rgba(230,200,77,0.16)','#e6c84d','Em revis\u00e3o'],d:['rgba(161,159,157,0.15)','#A19F9D','Descontinuada']};const s=m[t];
+      return h('span',{style:{display:'inline-block',padding:'2px 8px',borderRadius:2,fontSize:10.5,fontWeight:600,background:s[0],color:s[1]}},s[2]);};
+    const rows=[
+      ['Margem bruta','(Receita l\u00edq. \u2212 CMV) \u00f7 Receita l\u00edq.','Item \u00b7 dia','Controladoria','c'],
+      ['Margem de contribui\u00e7\u00e3o','(Receita \u2212 custos vari\u00e1veis) \u00f7 Receita','Item \u00b7 dia','Controladoria','c'],
+      ['Turnover','((Adm + Deslig) \u00f7 2) \u00f7 Headcount m\u00e9dio','Colaborador \u00b7 m\u00eas','Recursos Humanos','c'],
+      ['Absente\u00edsmo','Horas ausentes \u00f7 Horas previstas','Colaborador \u00b7 m\u00eas','Recursos Humanos','r'],
+      ['Custo por entrega','Custo total da rota \u00f7 Entregas conclu\u00eddas','Entrega','Opera\u00e7\u00f5es','c'],
+      ['OTIF','Entregas no prazo e completas \u00f7 Total','Entrega','Opera\u00e7\u00f5es','c'],
+      ['CAC','Investimento em m\u00eddia \u00f7 Novos clientes','Canal \u00b7 m\u00eas','Marketing','c'],
+      ['Taxa de convers\u00e3o','Pagantes \u00f7 Sess\u00f5es','Sess\u00e3o \u00b7 canal','Marketing','r'],
+      ['Ocupa\u00e7\u00e3o de frota','Volume transportado \u00f7 Capacidade','Ve\u00edculo \u00b7 dia','Opera\u00e7\u00f5es','d']];
+    const head=['M\u00e9trica','F\u00f3rmula','Gr\u00e3o','Dono','Status'];
+    return h('table',{style:{width:'100%',borderCollapse:'collapse',fontFamily:this.FONT,minWidth:720}},[
+      h('thead',{key:'h'},h('tr',null,head.map((c,i)=>h('th',{key:i,style:{textAlign:'left',padding:'0 10px 6px',fontSize:10,letterSpacing:'.04em',textTransform:'uppercase',color:this.SUB,fontWeight:600,borderBottom:'1.5px solid '+this.AXIS}},c)))),
+      h('tbody',{key:'b'},rows.map((r,ri)=>h('tr',{key:ri,style:{background:ri%2?this.ALT:this.PANEL}},[
+        h('td',{key:0,style:{padding:'7px 10px',fontSize:12.5,fontWeight:600,color:this.INK,whiteSpace:'nowrap'}},r[0]),
+        h('td',{key:1,style:{padding:'7px 10px',fontSize:11.5,fontFamily:this.MONO,color:'#6aa9ff'}},r[1]),
+        h('td',{key:2,style:{padding:'7px 10px',fontSize:12,color:this.SUB,whiteSpace:'nowrap'}},r[2]),
+        h('td',{key:3,style:{padding:'7px 10px',fontSize:12,color:this.SUB,whiteSpace:'nowrap'}},r[3]),
+        h('td',{key:4,style:{padding:'7px 10px'}},chip(r[4]))])))]);
+  }
+  access(){
+    const h=React.createElement;
+    const cls=(t)=>{const m={pub:['rgba(58,160,255,0.16)','#6aa9ff','P\u00fablico'],int:['rgba(91,111,224,0.24)','#9aa6f0','Interno'],conf:['rgba(230,200,77,0.16)','#e6c84d','Confidencial'],rest:['rgba(224,108,117,0.16)','#f0919a','Restrito']};const s=m[t];
+      return h('span',{style:{display:'inline-block',padding:'2px 8px',borderRadius:2,fontSize:10.5,fontWeight:600,background:s[0],color:s[1]}},s[2]);};
+    const rows=[
+      ['Financeiro','conf','Sim \u2014 por centro de custo','Controladoria \u00b7 Diretoria'],
+      ['RH','rest','Sim \u2014 por unidade do gestor','RH \u00b7 Gestores diretos'],
+      ['Log\u00edstica','int','N\u00e3o','Opera\u00e7\u00f5es'],
+      ['Marketing','int','Sim \u2014 por squad','Marketing \u00b7 Growth'],
+      ['Executivo','conf','Sim \u2014 por diretoria','Diretoria']];
+    const head=['Relat\u00f3rio','Classifica\u00e7\u00e3o','RLS aplicado','P\u00fablico'];
+    return h('table',{style:{width:'100%',borderCollapse:'collapse',fontFamily:this.FONT,minWidth:640}},[
+      h('thead',{key:'h'},h('tr',null,head.map((c,i)=>h('th',{key:i,style:{textAlign:'left',padding:'0 10px 6px',fontSize:10,letterSpacing:'.04em',textTransform:'uppercase',color:this.SUB,fontWeight:600,borderBottom:'1.5px solid '+this.AXIS}},c)))),
+      h('tbody',{key:'b'},rows.map((r,ri)=>h('tr',{key:ri,style:{background:ri%2?this.ALT:this.PANEL}},[
+        h('td',{key:0,style:{padding:'7px 10px',fontSize:12.5,fontWeight:600,color:this.INK}},r[0]),
+        h('td',{key:1,style:{padding:'7px 10px'}},cls(r[1])),
+        h('td',{key:2,style:{padding:'7px 10px',fontSize:12,color:this.SUB}},r[2]),
+        h('td',{key:3,style:{padding:'7px 10px',fontSize:12,color:this.SUB}},r[3])])))]);
+  }
+
+  skills(){
+    const h=React.createElement;
+    const groups=[
+      ['Power BI',[['DAX',1],['Modelagem star schema',1],['Power Query / M',1],['RLS',1],['Gateway e atualização',1],['Otimização de modelo',1],['Temas e formatação',1],['Tabular Editor',0]]],
+      ['SQL',[['Joins e subqueries',1],['Agregações',1],['Window functions',1],['CTEs',1],['Views',1],['BigQuery',1],['Otimização de consulta',0]]],
+      ['Python',[['pandas',1],['ETL',1],['requests / APIs',1],['Automação de rotinas',1],['FastAPI',0],['Playwright / scraping',0]]],
+      ['Automações e dados',[['Integração via webhook',1],['Google Sheets API',1],['cron / agendamento',1],['Versionamento com Git',1],['Documentação de modelo',1]]],
+      ['Governança de dados',[['Dicionário de dados',1],['Catálogo e linhagem',1],['Qualidade (DAMA)',1],['RLS e controle de acesso',1],['Classificação de sensibilidade',1],['LGPD em relatórios',1],['Ciclo DEV/HML/PRD',1],['Certificação de datasets',1],['Gestão de mudança de métrica',1]]]];
+    const chip=(txt,core)=>h('span',{key:txt,style:{fontSize:12,padding:'4px 9px',borderRadius:2,color:core?this.INK:'#C8C6C4',background:core?'rgba(17,141,255,0.12)':'transparent',border:core?'1px solid rgba(17,141,255,0.35)':'1px solid rgba(255,255,255,0.14)'}},txt);
+    const sub=(label)=>h('div',{key:label,style:{fontSize:9.5,letterSpacing:'.07em',textTransform:'uppercase',color:'#8a8886',fontWeight:600,margin:'2px 0 8px'}},label);
+    return h('div',{},[
+      h('div',{key:'leg',style:{display:'flex',gap:16,flexWrap:'wrap',marginBottom:16,fontSize:11.5,color:'#A19F9D',alignItems:'center'}},[
+        h('span',{key:'a',style:{display:'inline-flex',alignItems:'center',gap:7}},[h('span',{key:'d',style:{width:11,height:11,borderRadius:2,background:'rgba(17,141,255,0.12)',border:'1px solid rgba(17,141,255,0.35)'}}),'Uso recorrente no dia a dia']),
+        h('span',{key:'b',style:{display:'inline-flex',alignItems:'center',gap:7}},[h('span',{key:'d',style:{width:11,height:11,borderRadius:2,background:'transparent',border:'1px solid rgba(255,255,255,0.14)'}}),'Já apliquei em projetos'])
+      ]),
+      h('div',{key:'grid',style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:16}},
+        groups.map((g,gi)=>{
+          const core=g[1].filter(it=>it[1]===1), sec=g[1].filter(it=>it[1]===0);
+          return h('div',{key:gi,style:{background:this.PANEL,border:'1px solid rgba(255,255,255,0.08)',borderRadius:2,padding:'16px 18px'}},[
+            h('div',{key:'t',style:{fontSize:13,fontWeight:700,color:this.INK,marginBottom:12,paddingBottom:8,borderBottom:'1px solid rgba(255,255,255,0.08)'}},g[0]),
+            core.length?sub('Uso recorrente'):null,
+            core.length?h('div',{key:'c',style:{display:'flex',flexWrap:'wrap',gap:6,marginBottom:sec.length?14:0}},core.map(it=>chip(it[0],true))):null,
+            sec.length?sub('Já apliquei'):null,
+            sec.length?h('div',{key:'s',style:{display:'flex',flexWrap:'wrap',gap:6}},sec.map(it=>chip(it[0],false))):null
+          ]);
+        }))
+    ]);
+  }
+
+  reportBody(rep,geral,detalhe,qualDims){
+    const t=this.state.tab[rep];
+    if(t==='detalhe') return detalhe;
+    if(t==='qualidade') return this.quality(qualDims);
+    return geral;
+  }
+  tabset(rep){return [
+    {k:'geral',label:'Vis\u00e3o Geral',active:this.state.tab[rep]==='geral'},
+    {k:'detalhe',label:'Detalhe',active:this.state.tab[rep]==='detalhe'},
+    {k:'qualidade',label:'Qualidade de Dados',active:this.state.tab[rep]==='qualidade'}];}
+
+  reportFin(){
+    const h=React.createElement, meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const receita=[9.2,9.8,10.1,10.4,10.9,11.2,10.7,10.5,11.4,11.8,11.1,11.3];
+    const margem=[41.2,40.1,39.4,38.9,38.2,37.6,37.1,37.9,38.6,38.4,38.1,38.9];
+    const wf=[{label:'Base',v:42.0,total:true},{label:'Pre\u00e7o',v:1.8},{label:'Mix',v:-1.2},{label:'Custo',v:-3.4},{label:'Desconto',v:-0.8},{label:'Final',v:38.4,total:true}];
+    const linhas=[{p:'Refrigerantes',r:52.4,m:36.2,v:-2.1},{p:'\u00c1guas',r:28.1,m:41.8,v:0.6},{p:'Sucos',r:21.7,m:39.4,v:-1.2},{p:'Energ\u00e9ticos',r:15.9,m:44.1,v:1.4},{p:'Cervejas',r:10.3,m:31.5,v:-3.8}];
+    const geral=h('div',null,[
+      h('div',{key:1},this.visFull(this.vbox('Receita (R$ mi) \u00d7 Margem %',this.comboChart(receita.map((v,i)=>({l:meses[i],v:v})),margem,{label:'Receita e margem',barTip:'Receita (R$ mi)',lineTip:'Margem'})))),
+      h('div',{key:2},this.visFull(this.vbox('Ponte de margem \u2014 p.p.',this.waterfall(wf,{label:'Cascata de margem'})))),
+      h('div',{key:3},this.visFull(this.vbox('Margem por linha de produto',this.matrix(
+        [{k:'p',label:'Linha de produto'},{k:'r',label:'Receita (R$ mi)',bar:true,barMax:52.4,fmt:v=>this.nf(v,1)},{k:'m',label:'Margem %',num:true,fmt:v=>this.nf(v,1)+'%'},{k:'v',label:'Var. p.p.',arrow:true,pp:true}],
+        linhas.map(r=>({p:r.p,r:r.r,m:r.m,v:r.v})),{p:'Total',r:128.4,m:38.4,v:-1.3}))))
+    ]);
+    const detalhe=this.vbox('Detalhe \u2014 margem por linha e alavanca',this.matrix(
+      [{k:'p',label:'Linha'},{k:'preco',label:'Pre\u00e7o p.p.',arrow:true,pp:true},{k:'mix',label:'Mix p.p.',arrow:true,pp:true},{k:'custo',label:'Custo p.p.',arrow:true,pp:true},{k:'desc',label:'Desconto p.p.',arrow:true,pp:true},{k:'m',label:'Margem %',num:true,fmt:v=>this.nf(v,1)+'%'}],
+      [{p:'Refrigerantes',preco:1.2,mix:-0.9,custo:-3.1,desc:-1.2,m:36.2},{p:'\u00c1guas',preco:2.1,mix:0.4,custo:-2.2,desc:-0.3,m:41.8},{p:'Sucos',preco:1.6,mix:-1.4,custo:-3.6,desc:-0.6,m:39.4},{p:'Energ\u00e9ticos',preco:2.4,mix:1.1,custo:-2.8,desc:-0.4,m:44.1},{p:'Cervejas',preco:0.9,mix:-2.1,custo:-4.4,desc:-1.1,m:31.5}],
+      {p:'Total',preco:1.8,mix:-1.2,custo:-3.4,desc:-0.8,m:38.4}));
+    const qual={dims:[{l:'Completude',v:99.1,m:98},{l:'Unicidade',v:99.9,m:99},{l:'Validade',v:97.6,m:97},{l:'Consist\u00eancia',v:98.2,m:98},{l:'Acur\u00e1cia',v:96.4,m:97},{l:'Atualidade',v:100,m:99}],
+      rules:[{t:'Nota fiscal \u00fanica por chave de acesso',p:100,min:99.5},{t:'CMV preenchido em todo item faturado',p:98.9,min:98},{t:'Desconto \u2264 pre\u00e7o de tabela',p:99.4,min:99},{t:'Centro de custo v\u00e1lido',p:98.2,min:98}]};
+    const cards=[{value:'R$ 128,4 mi',label:'Receita l\u00edquida (12M)',delta:'4,2%'},{value:'38,4%',label:'Margem bruta',delta:'1,3 p.p.',dir:'down'},{value:'22,1%',label:'Margem de contribui\u00e7\u00e3o',delta:'0,8 p.p.',dir:'down'},{value:'6,2%',label:'Desconto m\u00e9dio',delta:'0,9 p.p.',dir:'down'}].map((c,i)=>h('div',{key:i},this.kpi(c)));
+    const slicers=[this.slicer('Ano','2025',true),this.slicer('CD','Todos',false),this.slicer('Categoria','Todas',false),this.slicer(null,null,false,['01/2025','12/2025'])];
+    return this.shell('fin','Margem por Linha de Produto',' 12/01/2026 06:00',slicers,cards,this.tabset('fin'),this.reportBody('fin',geral,detalhe,qual));
+  }
+
+  reportRh(){
+    const h=React.createElement, meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const turn=[2.1,2.3,2.6,2.4,2.8,2.5,2.2,2.4,2.7,2.3,2.1,2.4];
+    const tempo=[{l:'<6m',v:214},{l:'6-12m',v:168},{l:'1-2a',v:132},{l:'2-5a',v:86},{l:'5a+',v:41}];
+    const hmRows=['Centro','Zona Sul','Barra','Niter\u00f3i'], hmCols=['Jan','Fev','Mar','Abr','Mai','Jun'];
+    const hm=[[3.1,2.8,3.4,2.9,3.6,3.2],[2.4,2.6,2.2,2.9,2.7,3.1],[3.8,4.1,3.6,4.4,3.9,4.2],[2.1,2.3,2.0,2.4,2.2,2.5]];
+    const gestores=[{g:'A. Ribeiro',hc:212,t:3.9,v:1.5},{g:'C. Menezes',hc:184,t:2.1,v:-0.4},{g:'F. Duarte',hc:167,t:4.4,v:2.0},{g:'L. Andrade',hc:229,t:1.8,v:-0.6},{g:'R. Tavares',hc:151,t:2.6,v:0.3}];
+    const geral=h('div',null,[
+      h('div',{key:1},this.vis2(
+        this.vbox('Turnover mensal vs. meta',this.lineChart(turn.map((v,i)=>({l:meses[i],v:v})),{target:2.0,min:1.6,max:3.0,yfmt:v=>this.nf(v,1)+'%',tfmt:v=>this.nf(v,1)+'%',label:'Turnover',tip:'Turnover'})),
+        this.vbox('Sa\u00eddas por tempo de casa',this.barChart(tempo,{ci:1,nosort:true,label:'Sa\u00eddas por tempo de casa',tip:'Sa\u00eddas'})))),
+      h('div',{key:2},this.visFull(this.vbox('Absente\u00edsmo % \u2014 unidade \u00d7 m\u00eas',h('div',{style:{paddingTop:6}},this.heatmap(hmRows,hmCols,hm,{label:'Mapa de calor de absente\u00edsmo'}))))),
+      h('div',{key:3},this.visFull(this.vbox('Turnover por gestor',this.matrix(
+        [{k:'g',label:'Gestor'},{k:'hc',label:'Headcount',num:true,bar:true,barMax:229},{k:'t',label:'Turnover %',num:true,fmt:v=>this.nf(v,1)+'%'},{k:'v',label:'Var. p.p.',arrow:true,pp:true}],
+        gestores,{g:'Total',hc:1842,t:2.4,v:0.2}))))
+    ]);
+    const detalhe=this.vbox('Detalhe \u2014 movimenta\u00e7\u00e3o por unidade',this.matrix(
+      [{k:'u',label:'Unidade'},{k:'adm',label:'Admiss\u00f5es',num:true},{k:'des',label:'Desligamentos',num:true},{k:'hc',label:'Headcount',num:true,bar:true,barMax:640},{k:'t',label:'Turnover %',num:true,fmt:v=>this.nf(v,1)+'%'}],
+      [{u:'Centro',adm:58,des:71,hc:612,t:2.6},{u:'Zona Sul',adm:44,des:39,hc:498,t:2.2},{u:'Barra',adm:66,des:82,hc:432,t:3.9},{u:'Niter\u00f3i',adm:31,des:28,hc:300,t:2.0}],
+      {u:'Total',adm:199,des:220,hc:1842,t:2.4}));
+    const qual={dims:[{l:'Completude',v:98.4,m:98},{l:'Unicidade',v:99.7,m:99},{l:'Validade',v:96.1,m:97},{l:'Consist\u00eancia',v:98.9,m:98},{l:'Acur\u00e1cia',v:95.1,m:97},{l:'Atualidade',v:99.8,m:99}],
+      rules:[{t:'Data de desligamento \u2265 data de admiss\u00e3o',p:100,min:100},{t:'Matr\u00edcula \u00fanica por colaborador',p:99.7,min:99.5},{t:'Centro de custo preenchido',p:98.2,min:98},{t:'Gestor v\u00e1lido no organograma',p:97.4,min:98}]};
+    const cards=[{value:'2,4%',label:'Turnover m\u00e9dio',delta:'0,2 p.p.',dir:'down'},{value:'1.842',label:'Headcount ativo',delta:'1,1%'},{value:'3,1%',label:'Absente\u00edsmo',delta:'0,4 p.p.',dir:'down'},{value:'2,7 anos',label:'Tempo m\u00e9dio de casa',delta:'0,2 ano'}].map((c,i)=>h('div',{key:i},this.kpi(c)));
+    const slicers=[this.slicer('Ano','2025',false),this.slicer('Unidade','Todas',true),this.slicer('Cargo','Todos',false),this.slicer(null,null,false,['01/2025','12/2025'])];
+    return this.shell('rh','Rotatividade e Absente\u00edsmo',' 12/01/2026 06:00',slicers,cards,this.tabset('rh'),this.reportBody('rh',geral,detalhe,qual));
+  }
+
+  reportLog(){
+    const h=React.createElement, meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const rotas=[{l:'R-07 Serra',v:26.4},{l:'R-03 Litoral',v:23.1},{l:'R-11 Vale',v:21.8},{l:'R-05 Metrop.',v:16.2},{l:'R-02 Baixada',v:14.7},{l:'R-09 Norte',v:12.3}];
+    const ocup=[71,73,69,75,78,80,79,77,81,83,80,78];
+    const otif=[92.1,93.4,91.8,94.2,93.9,95.1,94.6,93.2,94.8,95.3,94.1,93.7];
+    const rotasM=[{r:'R-07 Serra',c:26.4,o:62,otif:88.2,s:'r'},{r:'R-03 Litoral',c:23.1,o:68,otif:91.4,s:'y'},{r:'R-11 Vale',c:21.8,o:71,otif:93.1,s:'y'},{r:'R-05 Metrop.',c:16.2,o:84,otif:96.2,s:'g'},{r:'R-02 Baixada',c:14.7,o:88,otif:97.1,s:'g'},{r:'R-09 Norte',c:12.3,o:91,otif:97.8,s:'g'}];
+    const geral=h('div',null,[
+      h('div',{key:1},this.vis2(
+        this.vbox('Custo por entrega por rota \u2014 R$',this.barChart(rotas,{ci:0,fmt:v=>'R$ '+this.nf(v,2),label:'Custo por entrega por rota',tip:'Custo/entrega'})),
+        this.vbox('Ocupa\u00e7\u00e3o de ve\u00edculo %',this.areaChart(ocup.map((v,i)=>({l:meses[i],v:v})),{ci:3,max:100,suffix:'%',label:'Ocupa\u00e7\u00e3o de ve\u00edculo',tip:'Ocupa\u00e7\u00e3o'})))),
+      h('div',{key:2},this.visFull(this.vbox('OTIF % vs. meta',this.lineChart(otif.map((v,i)=>({l:meses[i],v:v})),{wide:true,target:95,min:88,max:99,yfmt:v=>this.nf(v,0)+'%',tfmt:v=>this.nf(v,0)+'%',tip:'OTIF',ci:1,label:'OTIF'})))),
+      h('div',{key:3},this.visFull(this.vbox('Rotas \u2014 custo, ocupa\u00e7\u00e3o e OTIF',this.matrix(
+        [{k:'r',label:'Rota'},{k:'c',label:'Custo/entrega',bar:true,barMax:26.4,fmt:v=>'R$ '+this.nf(v,2)},{k:'o',label:'Ocupa\u00e7\u00e3o %',num:true,fmt:v=>this.nf(v,0)+'%'},{k:'otif',label:'OTIF %',num:true,fmt:v=>this.nf(v,1)+'%'},{k:'s',label:'Status',sem:true,align:'center'}],
+        rotasM,{r:'Total',c:18.40,o:78,otif:93.7,s:null}))))
+    ]);
+    const detalhe=this.vbox('Detalhe \u2014 rotas deficit\u00e1rias',this.matrix(
+      [{k:'r',label:'Rota'},{k:'ent',label:'Entregas',num:true},{k:'custo',label:'Custo total (R$ mil)',num:true,fmt:v=>this.nf(v,1)},{k:'rec',label:'Receita (R$ mil)',num:true,fmt:v=>this.nf(v,1)},{k:'res',label:'Resultado (R$ mil)',arrow:true,pp:false}],
+      [{r:'R-07 Serra',ent:3120,custo:82.4,rec:74.1,res:-11.2},{r:'R-03 Litoral',ent:4180,custo:96.6,rec:98.2,res:1.7},{r:'R-11 Vale',ent:3860,custo:84.1,rec:88.4,res:5.1}],
+      {r:'Total',ent:11160,custo:263.1,rec:260.7,res:-0.9}));
+    const qual={dims:[{l:'Completude',v:97.9,m:98},{l:'Unicidade',v:99.4,m:99},{l:'Validade',v:96.4,m:97},{l:'Consist\u00eancia',v:98.1,m:98},{l:'Acur\u00e1cia',v:96.8,m:97},{l:'Atualidade',v:99.5,m:99}],
+      rules:[{t:'Rota com CEP de destino v\u00e1lido',p:96.4,min:97},{t:'Entrega com data e hora de baixa',p:98.7,min:98},{t:'Placa de ve\u00edculo cadastrada',p:99.9,min:99.5},{t:'Custo de rota > 0',p:100,min:100}]};
+    const cards=[{value:'R$ 18,40',label:'Custo m\u00e9dio por entrega',delta:'R$ 0,90',dir:'down'},{value:'93,7%',label:'OTIF',delta:'1,3 p.p.',dir:'down'},{value:'84,2 mil',label:'Entregas (12M)',delta:'6,4%'},{value:'78,5%',label:'Ocupa\u00e7\u00e3o de frota',delta:'3,1 p.p.'}].map((c,i)=>h('div',{key:i},this.kpi(c)));
+    const slicers=[this.slicer('Ano','2025',false),this.slicer('Rota','Todas',true),this.slicer('CD','RJ',false),this.slicer(null,null,false,['01/2025','12/2025'])];
+    return this.shell('log','Custo e N\u00edvel de Servi\u00e7o',' 12/01/2026 06:00',slicers,cards,this.tabset('log'),this.reportBody('log',geral,detalhe,qual));
+  }
+
+  reportMkt(){
+    const h=React.createElement, meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const canais=[{l:'Google',v:820},{l:'Meta',v:640},{l:'TikTok',v:420},{l:'E-mail',v:310},{l:'Influ\u00eancia',v:210}];
+    const cac=[{l:'Google',v:78},{l:'Meta',v:86},{l:'TikTok',v:112},{l:'E-mail',v:41},{l:'Influ\u00eancia',v:134}];
+    const conv=[1.9,2.1,2.4,2.6,2.9,3.1,3.4,3.6,3.5,3.8,3.7,3.9];
+    const funil=[{e:'Sess\u00f5es',q:684000,c:'\u2014'},{e:'Leads',q:47880,c:'7,0%'},{e:'Trials',q:15804,c:'33,0%'},{e:'Pagantes',q:5847,c:'37,0%'}];
+    const geral=h('div',null,[
+      h('div',{key:1},this.vis2(
+        this.vbox('Investimento por canal \u2014 R$ mil',this.donut(canais,{center:'R$ 2,4 mi',centerLabel:'total 12M',label:'Investimento por canal'})),
+        this.vbox('CAC por canal \u2014 R$',this.colChart(cac,{ci:2,fmt:v=>'R$ '+this.nf(v,0),label:'CAC por canal',tip:'CAC'})))),
+      h('div',{key:2},this.visFull(this.vbox('Taxa de convers\u00e3o % (defasagem 14d)',this.lineChart(conv.map((v,i)=>({l:meses[i],v:v})),{wide:true,min:1.5,max:4.2,yfmt:v=>this.nf(v,1)+'%',ci:3,tip:'Convers\u00e3o',label:'Convers\u00e3o'})))),
+      h('div',{key:3},this.visFull(this.vbox('Funil de aquisi\u00e7\u00e3o',this.matrix(
+        [{k:'e',label:'Etapa'},{k:'q',label:'Quantidade',num:true,bar:true,barMax:684000},{k:'c',label:'Convers\u00e3o etapa'}],
+        funil,{e:'Convers\u00e3o total',q:null,c:'0,9%'}))))
+    ]);
+    const detalhe=this.vbox('Detalhe \u2014 desempenho por canal',this.matrix(
+      [{k:'c',label:'Canal'},{k:'inv',label:'Investimento (R$ mil)',num:true,bar:true,barMax:820,fmt:v=>this.nf(v,0)},{k:'cli',label:'Novos clientes',num:true},{k:'cac',label:'CAC (R$)',num:true,fmt:v=>'R$ '+this.nf(v,0)},{k:'cv',label:'Convers\u00e3o %',num:true,fmt:v=>this.nf(v,1)+'%'}],
+      [{c:'Google',inv:820,cli:10513,cac:78,cv:4.1},{c:'Meta',inv:640,cli:7442,cac:86,cv:3.6},{c:'TikTok',inv:420,cli:3750,cac:112,cv:2.4},{c:'E-mail',inv:310,cli:7561,cac:41,cv:5.2},{c:'Influ\u00eancia',inv:210,cli:1567,cac:134,cv:2.0}],
+      {c:'Total',inv:2400,cli:26833,cac:92,cv:3.8}));
+    const qual={dims:[{l:'Completude',v:98.8,m:98},{l:'Unicidade',v:99.2,m:99},{l:'Validade',v:97.3,m:97},{l:'Consist\u00eancia',v:97.6,m:98},{l:'Acur\u00e1cia',v:96.1,m:97},{l:'Atualidade',v:99.1,m:99}],
+      rules:[{t:'Sess\u00e3o com canal de origem preenchido',p:99.1,min:99},{t:'Investimento conciliado com Meta Ads',p:98.4,min:98},{t:'Convers\u00e3o atribu\u00edda em at\u00e9 14 dias',p:97.2,min:97},{t:'Cliente \u00fanico por documento',p:99.6,min:99.5}]};
+    const cards=[{value:'R$ 92',label:'CAC blended',delta:'R$ 7',dir:'down'},{value:'R$ 2,4 mi',label:'Investimento (12M)',delta:'12,4%'},{value:'26,1 mil',label:'Novos clientes',delta:'18,2%'},{value:'3,8%',label:'Taxa de convers\u00e3o',delta:'0,4 p.p.'}].map((c,i)=>h('div',{key:i},this.kpi(c)));
+    const slicers=[this.slicer('Ano','2025',false),this.slicer('Canal','Todos',true),this.slicer('Campanha','Todas',false),this.slicer(null,null,false,['01/2025','12/2025'])];
+    return this.shell('mkt','Aquisi\u00e7\u00e3o por Canal',' 12/01/2026 07:00',slicers,cards,this.tabset('mkt'),this.reportBody('mkt',geral,detalhe,qual));
+  }
+
+  rules(){
+    const h=React.createElement;
+    const list=[{t:'Data de desligamento \u2265 data de admiss\u00e3o',p:100},{t:'Matr\u00edcula \u00fanica por colaborador',p:99.7},{t:'Centro de custo preenchido',p:98.2},{t:'Rota com CEP de destino v\u00e1lido',p:96.4}];
+    return h('div',{style:{display:'flex',flexDirection:'column',gap:10}},list.map((r,i)=>h('div',{key:i,style:{display:'flex',alignItems:'baseline',gap:10,fontSize:13,paddingBottom:8,borderBottom:i<list.length-1?'1px solid rgba(255,255,255,0.07)':'none'}},[
+      h('span',{key:'t',style:{flex:1,fontFamily:this.MONO,fontSize:11.5,color:this.INK,lineHeight:1.4}},r.t),
+      h('span',{key:'p',style:{fontVariantNumeric:'tabular-nums',fontWeight:700,color:r.p>=99?this.POS:(r.p>=97?this.S[6]:this.NEG)}},this.nf(r.p,1)+'%')])));
+  }
+
+  renderVals(){
+    return {
+      report_fin:this.reportFin(), report_rh:this.reportRh(), report_log:this.reportLog(), report_mkt:this.reportMkt(),
+      lineage:this.lineage(), lifecycle:this.lifecycle(), dictionary:this.dictionary(), access:this.access(),
+      dama:this.damaTable([{l:'Completude',v:98.6,m:98},{l:'Unicidade',v:99.7,m:99},{l:'Validade',v:96.4,m:97},{l:'Consist\u00eancia',v:98.2,m:98},{l:'Acur\u00e1cia',v:95.9,m:97},{l:'Atualidade',v:99.8,m:99}]),
+      rules:this.rules(), skills:this.skills()
+    };
+  }
+}
+
+/* bootstrap */
+(function () {
+  function mount() {
+    var host = document.createElement('div');
+    host.style.display = 'none';
+    document.body.appendChild(host);
+    ReactDOM.createRoot(host).render(React.createElement(Component));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
+  else mount();
+})();
+</script>
+</body>
+</html>
