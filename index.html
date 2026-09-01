@@ -37,15 +37,15 @@ class DCLogic extends React.Component {
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#1B1A19;color:#F3F2F1;font-family:'Segoe UI','Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
-a{color:#6aa9ff;text-decoration:none}
-a:hover{color:#9cc4ff;text-decoration:underline}
-:focus-visible{outline:2px solid #118DFF;outline-offset:2px}
-::selection{background:#163a5f}
+body{margin:0;background:#0A0E14;background-image:radial-gradient(circle at 1px 1px,rgba(125,145,175,0.16) 1px,transparent 0);background-size:28px 28px;color:#E7EAF0;font-family:'Inter','Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:#4C9AFF;text-decoration:none}
+a:hover{color:#8AB8FF;text-decoration:underline}
+:focus-visible{outline:2px solid #1470B8;outline-offset:2px}
+::selection{background:#0E2A46}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes growV{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 @keyframes growH{from{transform:scaleX(0)}to{transform:scaleX(1)}}
@@ -75,60 +75,61 @@ a:hover{color:#9cc4ff;text-decoration:underline}
 <main id="dc-root">
 
 
-<nav style="position:fixed;top:0;left:0;right:0;height:52px;z-index:50;background:rgba(15,14,13,0.96);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid rgba(255,255,255,0.08)">
-  <a href="#topo" style="color:#fff;font-weight:700;font-size:14px;letter-spacing:.01em;text-decoration:none">Matheus Nascimento<span style="color:#6aa9ff;font-weight:400"> · BI</span></a>
+<nav style="position:fixed;top:0;left:0;right:0;height:52px;z-index:50;background:rgba(6,9,14,0.94);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid rgba(125,145,175,0.08)">
+  <a href="#topo" style="color:#fff;font-weight:700;font-size:14px;letter-spacing:.01em;text-decoration:none">Matheus Nascimento<span style="color:#4C9AFF;font-weight:400"> · BI</span></a>
   <div style="display:flex;gap:22px;align-items:center;font-size:12.5px">
-    <a href="#sobre" style="color:#A19F9D">Sobre</a>
-    <a href="#case-01" style="color:#A19F9D">Financeiro</a>
-    <a href="#case-02" style="color:#A19F9D">RH</a>
-    <a href="#case-03" style="color:#A19F9D">Logística</a>
-    <a href="#case-04" style="color:#A19F9D">Marketing</a>
-    <a href="#gov" style="color:#A19F9D">Governança</a>
-    <a href="#skills" style="color:#A19F9D">Skills</a>
+    <a href="#sobre" style="color:#7C8798">Sobre</a>
+    <a href="#case-01" style="color:#7C8798">Financeiro</a>
+    <a href="#case-02" style="color:#7C8798">RH</a>
+    <a href="#case-03" style="color:#7C8798">Logística</a>
+    <a href="#case-04" style="color:#7C8798">Marketing</a>
+    <a href="#gov" style="color:#7C8798">Governança</a>
+    <a href="#skills" style="color:#7C8798">Skills</a>
   </div>
 </nav>
 
-<header id="topo" style="max-width:1180px;margin:0 auto;padding:104px 24px 40px">
-  <div>
-  <div style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:.12em;color:#A19F9D;text-transform:uppercase;margin-bottom:14px">Analista de BI · Analista de Dados</div>
-  <h1 style="margin:0;font-size:clamp(34px,5vw,58px);font-weight:700;line-height:1.02;letter-spacing:-0.02em;color:#F3F2F1">Matheus Nascimento</h1>
-  <p style="margin:16px 0 0;max-width:640px;font-size:16px;line-height:1.5;color:#C8C6C4">Construo relatórios que fecham: do ETL ao dataset certificado.</p>
+<header id="topo" style="position:relative;max-width:1180px;margin:0 auto;padding:104px 24px 40px;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:-180px;left:50%;transform:translateX(-38%);width:640px;height:420px;background:radial-gradient(closest-side,rgba(11,127,224,0.16),rgba(11,127,224,0) 72%);pointer-events:none;z-index:0"></div>
+  <div style="position:relative;z-index:1">
+  <div style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:.12em;color:#7C8798;text-transform:uppercase;margin-bottom:14px">Analista de BI · Analista de Dados</div>
+  <h1 style="margin:0;font-size:clamp(34px,5vw,58px);font-weight:700;line-height:1.02;letter-spacing:-0.02em;color:#E7EAF0">Matheus Nascimento</h1>
+  <p style="margin:16px 0 0;max-width:640px;font-size:16px;line-height:1.5;color:#9FA8B7">Construo relatórios que fecham: do ETL ao dataset certificado.</p>
   <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
-    <a href="https://www.linkedin.com/in/matheus-nascimento-51243a243" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:#118DFF;color:#fff;border-radius:2px;font-size:13px;font-weight:600">LinkedIn</a>
-    <a href="https://github.com/matheusnascimento8e7-hub" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:transparent;color:#F3F2F1;border:1px solid rgba(255,255,255,0.18);border-radius:2px;font-size:13px;font-weight:600">GitHub</a>
-    <a href="mailto:matheusnascimento8e7@gmail.com" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:transparent;color:#F3F2F1;border:1px solid rgba(255,255,255,0.18);border-radius:2px;font-size:13px;font-weight:600">E-mail</a>
+    <a href="https://www.linkedin.com/in/matheus-nascimento-51243a243" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:#1470B8;color:#fff;border-radius:2px;font-size:13px;font-weight:600">LinkedIn</a>
+    <a href="https://github.com/matheusnascimento8e7-hub" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:transparent;color:#E7EAF0;border:1px solid rgba(125,145,175,0.18);border-radius:2px;font-size:13px;font-weight:600">GitHub</a>
+    <a href="mailto:matheusnascimento8e7@gmail.com" style="display:inline-flex;align-items:center;gap:7px;padding:9px 15px;background:transparent;color:#E7EAF0;border:1px solid rgba(125,145,175,0.18);border-radius:2px;font-size:13px;font-weight:600">E-mail</a>
   </div>
   </div>
 </header>
 
 <section id="sobre" style="max-width:1180px;margin:0 auto;padding:8px 24px 8px;scroll-margin-top:64px">
-  <div style="border:1px solid rgba(255,255,255,0.1);border-radius:2px;background:#1B1A19;padding:26px 26px 28px">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500;margin-bottom:10px">Apresentação</div>
+  <div style="border:1px solid rgba(125,145,175,0.1);border-radius:2px;background:#0A0E14;padding:26px 26px 28px">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500;margin-bottom:10px">Apresentação</div>
     <div style="display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap">
-    <img src="assets/perfil.png" onerror="this.style.display='none'" alt="Matheus Nascimento" style="flex:0 0 auto;width:180px;height:200px;object-fit:cover;object-position:center 22%;border-radius:2px;border:1px solid rgba(255,255,255,0.12);display:block" />
-    <p style="margin:0;flex:1 1 420px;min-width:280px;font-size:15px;line-height:1.65;color:#C8C6C4">Sou Analista de BI e trabalho para transformar dado bruto em decisão que o negócio consegue tomar com segurança. Atuo em todo o ciclo do dado: levanto a necessidade com a área, modelo o dado em star schema, construo o ETL/ELT, escrevo as medidas em DAX e publico o relatório já governado no Power BI Service. Meu foco não é entregar painel bonito, e sim relatório que a operação abre todo dia porque confia no número. Para isso, documento a regra de negócio, versiono o dataset, aplico segurança em nível de linha e defino o SLA de atualização, deixando cada indicador rastreável da fonte até o valor final. O resultado é menos retrabalho, menos planilha paralela e mais tempo da equipe gasto decidindo em vez de conferir dado.</p>
+    <img src="assets/perfil.png" onerror="this.style.display='none'" alt="Matheus Nascimento" style="flex:0 0 auto;width:180px;height:200px;object-fit:cover;object-position:center 22%;border-radius:2px;border:1px solid rgba(125,145,175,0.12);display:block" />
+    <p style="margin:0;flex:1 1 420px;min-width:280px;font-size:15px;line-height:1.65;color:#9FA8B7">Sou Analista de BI e trabalho para transformar dado bruto em decisão que o negócio consegue tomar com segurança. Atuo em todo o ciclo do dado: levanto a necessidade com a área, modelo o dado em star schema, construo o ETL/ELT, escrevo as medidas em DAX e publico o relatório já governado no Power BI Service. Meu foco não é entregar painel bonito, e sim relatório que a operação abre todo dia porque confia no número. Para isso, documento a regra de negócio, versiono o dataset, aplico segurança em nível de linha e defino o SLA de atualização, deixando cada indicador rastreável da fonte até o valor final. O resultado é menos retrabalho, menos planilha paralela e mais tempo da equipe gasto decidindo em vez de conferir dado.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:24px">
       <div>
-        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Skills técnicas</div>
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:10px">Skills técnicas</div>
         <div style="display:flex;flex-wrap:wrap;gap:7px">
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Power BI</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">DAX</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Power Query</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">SQL</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Modelagem dimensional</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">ETL/ELT</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Excel avançado</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Python (pandas)</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Automação</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">IA</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Governança de dados</span>
-          <span style="padding:5px 10px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;font-size:12px;color:#F3F2F1">Pipeline de dados</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Power BI</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">DAX</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Power Query</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">SQL</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Modelagem dimensional</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">ETL/ELT</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Excel avançado</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Python (pandas)</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Automação</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">IA</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Governança de dados</span>
+          <span style="padding:5px 10px;border:1px solid rgba(125,145,175,0.14);border-radius:2px;font-size:12px;color:#E7EAF0">Pipeline de dados</span>
         </div>
       </div>
       <div>
-        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Skills comportamentais</div>
-        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#C8C6C4;line-height:1.4">
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:10px">Skills comportamentais</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#9FA8B7;line-height:1.4">
           <div>Comunicação clara com áreas de negócio</div>
           <div>Atenção a detalhe e consistência do número</div>
           <div>Autonomia e organização por SLA</div>
@@ -136,16 +137,16 @@ a:hover{color:#9cc4ff;text-decoration:underline}
         </div>
       </div>
       <div>
-        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Experiência</div>
-        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#C8C6C4;line-height:1.4">
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:10px">Experiência</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#9FA8B7;line-height:1.4">
           <div>Relatórios de produção nas áreas de Financeiro, RH, Logística e Marketing</div>
           <div>Datasets certificados e governados no Power BI Service</div>
           <div>Automação de ETL e atualização incremental D-1</div>
         </div>
       </div>
       <div>
-        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:10px">Como agrego</div>
-        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#C8C6C4;line-height:1.4">
+        <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:10px">Como agrego</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:#9FA8B7;line-height:1.4">
           <div>Reduzo retrabalho com dado único e confiável</div>
           <div>Encurto o tempo entre pergunta e resposta</div>
           <div>Deixo a operação autônoma para decidir por dados</div>
@@ -158,57 +159,57 @@ a:hover{color:#9cc4ff;text-decoration:underline}
 <main style="max-width:1180px;margin:0 auto;padding:0 24px 40px">
 
   <section id="case-01" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 01 · Financeiro</div>
-    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Onde a margem vazou?</h2>
-    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">A Aurora Bebidas via a margem cair sem saber a causa. É uma distribuidora com 3 CDs, mix de 240 SKUs e desconto fora de controle.</p>
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Case 01 · Financeiro</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Onde a margem vazou?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#9FA8B7;line-height:1.5">A Aurora Bebidas via a margem cair sem saber a causa. É uma distribuidora com 3 CDs, mix de 240 SKUs e desconto fora de controle.</p>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_fin" style="display:contents"></div></div>
-    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#525C6B;text-transform:uppercase">◆ Empresa e dados fictícios</div>
     <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
           <thead><tr>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
-            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Sensibilidade</th>
           </tr></thead>
-          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">2 fatos · 5 dimensões · star schema</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por item de nota · dia</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">34</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">SQL Server · Protheus</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 06:00</td>
-            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Confidencial</td>
+          <tbody><tr style="border-top:1px solid rgba(125,145,175,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">2 fatos · 5 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">1 linha por item de nota · dia</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#9FA8B7">34</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">SQL Server · Protheus</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">D-1 até 06:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#9FA8B7">Confidencial</td>
           </tr></tbody>
         </table>
       </div>
-      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
-        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+      <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#4C9AFF;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
         <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Margem bruta</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Receita líquida menos CMV sobre a receita líquida.</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">(Receita líquida − CMV) ÷ Receita líquida</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Controladoria</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Fretes, brindes e amostras não faturadas.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Margem bruta</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Definição</dt><dd style="margin:0;color:#9FA8B7">Receita líquida menos CMV sobre a receita líquida.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">(Receita líquida − CMV) ÷ Receita líquida</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#9FA8B7">Controladoria</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Exclusões</dt><dd style="margin:0;color:#9FA8B7">Fretes, brindes e amostras não faturadas.</dd>
         </dl>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
             <li style="margin-bottom:6px">Isolou perda de 3,6 p.p. de margem em três alavancas.</li>
             <li style="margin-bottom:6px">Identificou desconto excessivo em 2 SKUs de alto giro.</li>
             <li>Reduziu fechamento de margem de 4 dias para D-1.</li>
           </ul>
         </div>
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
-            <li style="margin-bottom:6px">Modelei <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Vendas</code> no grão de item com Power Query e unpivot de impostos.</li>
-            <li style="margin-bottom:6px">Ponte de margem em DAX com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">CALCULATE</code> e <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SWITCH</code> por alavanca.</li>
-            <li style="margin-bottom:6px">Medidas de mix com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SUMMARIZE</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">D_Produto</code>.</li>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
+            <li style="margin-bottom:6px">Modelei <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">F_Vendas</code> no grão de item com Power Query e unpivot de impostos.</li>
+            <li style="margin-bottom:6px">Ponte de margem em DAX com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">CALCULATE</code> e <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">SWITCH</code> por alavanca.</li>
+            <li style="margin-bottom:6px">Medidas de mix com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">SUMMARIZE</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">D_Produto</code>.</li>
             <li>Data bars condicionais na matriz por linha de produto.</li>
           </ul>
         </div>
@@ -216,58 +217,58 @@ a:hover{color:#9cc4ff;text-decoration:underline}
     </div>
   </section>
 
-  <section id="case-02" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 02 · Recursos Humanos</div>
-    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Quem sai, quando sai e por quê?</h2>
-    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">O Meridiano Varejo perdia gente sem enxergar o padrão. É uma rede de 42 lojas, com 1.842 colaboradores e rotatividade alta.</p>
+  <section id="case-02" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(125,145,175,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Case 02 · Recursos Humanos</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Quem sai, quando sai e por quê?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#9FA8B7;line-height:1.5">O Meridiano Varejo perdia gente sem enxergar o padrão. É uma rede de 42 lojas, com 1.842 colaboradores e rotatividade alta.</p>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_rh" style="display:contents"></div></div>
-    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#525C6B;text-transform:uppercase">◆ Empresa e dados fictícios</div>
     <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
           <thead><tr>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
-            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Sensibilidade</th>
           </tr></thead>
-          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">2 fatos · 4 dimensões · star schema</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por evento de movimentação</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">28</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">SQL Server · Senior</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 06:00</td>
-            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Restrito</td>
+          <tbody><tr style="border-top:1px solid rgba(125,145,175,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">2 fatos · 4 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">1 linha por evento de movimentação</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#9FA8B7">28</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">SQL Server · Senior</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">D-1 até 06:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#9FA8B7">Restrito</td>
           </tr></tbody>
         </table>
       </div>
-      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
-        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+      <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#4C9AFF;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
         <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Turnover</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Média de admissões e desligamentos sobre o headcount médio.</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">((Admissões + Desligamentos) ÷ 2) ÷ Headcount médio</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Recursos Humanos</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Transferências internas e estágios.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Turnover</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Definição</dt><dd style="margin:0;color:#9FA8B7">Média de admissões e desligamentos sobre o headcount médio.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">((Admissões + Desligamentos) ÷ 2) ÷ Headcount médio</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#9FA8B7">Recursos Humanos</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Exclusões</dt><dd style="margin:0;color:#9FA8B7">Transferências internas e estágios.</dd>
         </dl>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
             <li style="margin-bottom:6px">Concentrou 61% das saídas no primeiro ano de casa.</li>
             <li style="margin-bottom:6px">Expôs 3 gestores com turnover acima do dobro da meta.</li>
             <li>Antecipou risco de absenteísmo por unidade e mês.</li>
           </ul>
         </div>
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
-            <li style="margin-bottom:6px">Fato <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Movimentacao</code> com admissões e desligamentos por <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">merge</code> no Power Query.</li>
-            <li style="margin-bottom:6px">Headcount médio via <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">CALCULATE</code> + <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DATESINPERIOD</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">D_Calendario</code>.</li>
-            <li style="margin-bottom:6px">Faixa de tempo de casa com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SWITCH(TRUE())</code> em coluna calculada.</li>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
+            <li style="margin-bottom:6px">Fato <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">F_Movimentacao</code> com admissões e desligamentos por <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">merge</code> no Power Query.</li>
+            <li style="margin-bottom:6px">Headcount médio via <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">CALCULATE</code> + <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">DATESINPERIOD</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">D_Calendario</code>.</li>
+            <li style="margin-bottom:6px">Faixa de tempo de casa com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">SWITCH(TRUE())</code> em coluna calculada.</li>
             <li>RLS por unidade do gestor com regra dinâmica.</li>
           </ul>
         </div>
@@ -275,58 +276,58 @@ a:hover{color:#9cc4ff;text-decoration:underline}
     </div>
   </section>
 
-  <section id="case-03" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 03 · Logística</div>
-    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Qual rota custa mais do que entrega?</h2>
-    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">A TransVale Log gastava mais nas rotas que rendiam menos. É uma transportadora regional, com 12 rotas fixas e frota de 68 veículos.</p>
+  <section id="case-03" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(125,145,175,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Case 03 · Logística</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Qual rota custa mais do que entrega?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#9FA8B7;line-height:1.5">A TransVale Log gastava mais nas rotas que rendiam menos. É uma transportadora regional, com 12 rotas fixas e frota de 68 veículos.</p>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_log" style="display:contents"></div></div>
-    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#525C6B;text-transform:uppercase">◆ Empresa e dados fictícios</div>
     <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
           <thead><tr>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
-            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Sensibilidade</th>
           </tr></thead>
-          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">2 fatos · 5 dimensões · star schema</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por entrega</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">31</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">BigQuery · TMS</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 06:00</td>
-            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Interno</td>
+          <tbody><tr style="border-top:1px solid rgba(125,145,175,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">2 fatos · 5 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">1 linha por entrega</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#9FA8B7">31</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">BigQuery · TMS</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">D-1 até 06:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#9FA8B7">Interno</td>
           </tr></tbody>
         </table>
       </div>
-      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
-        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+      <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#4C9AFF;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
         <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Custo por entrega</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Custo total da rota dividido pelas entregas concluídas.</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">Custo total da rota ÷ Entregas concluídas</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Operações</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Entregas canceladas e devoluções.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">Custo por entrega</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Definição</dt><dd style="margin:0;color:#9FA8B7">Custo total da rota dividido pelas entregas concluídas.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">Custo total da rota ÷ Entregas concluídas</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#9FA8B7">Operações</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Exclusões</dt><dd style="margin:0;color:#9FA8B7">Entregas canceladas e devoluções.</dd>
         </dl>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
             <li style="margin-bottom:6px">Flagrou 3 rotas com custo por entrega acima da receita.</li>
             <li style="margin-bottom:6px">Ligou baixa ocupação de veículo a custo unitário alto.</li>
             <li>Monitorou OTIF diário contra meta de 95%.</li>
           </ul>
         </div>
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
-            <li style="margin-bottom:6px">Fato <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Entregas</code> ingerido do TMS via <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">BigQuery</code> em camada tratada.</li>
-            <li style="margin-bottom:6px">OTIF com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DIVIDE</code> de entregas no prazo e completas sobre o total.</li>
-            <li style="margin-bottom:6px">Ranking de custo por rota com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">RANKX</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">D_Rota</code>.</li>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
+            <li style="margin-bottom:6px">Fato <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">F_Entregas</code> ingerido do TMS via <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">BigQuery</code> em camada tratada.</li>
+            <li style="margin-bottom:6px">OTIF com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">DIVIDE</code> de entregas no prazo e completas sobre o total.</li>
+            <li style="margin-bottom:6px">Ranking de custo por rota com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">RANKX</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">D_Rota</code>.</li>
             <li>Semáforo por regra de meta na matriz de rotas.</li>
           </ul>
         </div>
@@ -334,147 +335,147 @@ a:hover{color:#9cc4ff;text-decoration:underline}
     </div>
   </section>
 
-  <section id="case-04" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Case 04 · Marketing</div>
-    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Qual canal sustenta a aquisição?</h2>
-    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">A Nuvela Assinaturas não sabia qual canal sustentava o crescimento. É um clube com 26 mil assinantes ativos e 5 canais pagos.</p>
+  <section id="case-04" data-reveal style="padding:48px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(125,145,175,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Case 04 · Marketing</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Qual canal sustenta a aquisição?</h2>
+    <p style="margin:0 0 20px;max-width:680px;font-size:15px;color:#9FA8B7;line-height:1.5">A Nuvela Assinaturas não sabia qual canal sustentava o crescimento. É um clube com 26 mil assinantes ativos e 5 canais pagos.</p>
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:2px"><div data-slot="report_mkt" style="display:contents"></div></div>
-    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#7a7876;text-transform:uppercase">◆ Empresa e dados fictícios</div>
+    <div style="margin-top:8px;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.08em;color:#525C6B;text-transform:uppercase">◆ Empresa e dados fictícios</div>
     <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px">
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">
           <thead><tr>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Modelo</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Grão</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Medidas DAX</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fontes</th>
-            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">SLA de atualização</th>
-            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Sensibilidade</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Modelo</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Grão</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Medidas DAX</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fontes</th>
+            <th style="text-align:left;padding:0 14px 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">SLA de atualização</th>
+            <th style="text-align:left;padding:0 0 6px 0;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Sensibilidade</th>
           </tr></thead>
-          <tbody><tr style="border-top:1px solid rgba(255,255,255,0.1)">
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">3 fatos · 4 dimensões · star schema</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">1 linha por sessão · canal · dia</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#C8C6C4">26</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">BigQuery · GA4 · Meta Ads</td>
-            <td style="padding:8px 14px 0 0;vertical-align:top;color:#C8C6C4">D-1 até 07:00</td>
-            <td style="padding:8px 0 0 0;vertical-align:top;color:#C8C6C4">Interno</td>
+          <tbody><tr style="border-top:1px solid rgba(125,145,175,0.1)">
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">3 fatos · 4 dimensões · star schema</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">1 linha por sessão · canal · dia</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;font-variant-numeric:tabular-nums;color:#9FA8B7">26</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">BigQuery · GA4 · Meta Ads</td>
+            <td style="padding:8px 14px 0 0;vertical-align:top;color:#9FA8B7">D-1 até 07:00</td>
+            <td style="padding:8px 0 0 0;vertical-align:top;color:#9FA8B7">Interno</td>
           </tr></tbody>
         </table>
       </div>
-      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:16px 18px">
-        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6aa9ff;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
+      <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#4C9AFF;font-weight:600;margin-bottom:12px">Dicionário · métrica principal</div>
         <dl style="margin:0;display:grid;grid-template-columns:150px 1fr;gap:9px 18px;font-size:13px;align-items:baseline">
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">CAC</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Definição</dt><dd style="margin:0;color:#C8C6C4">Investimento em mídia dividido pelos novos clientes do período.</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">Investimento em mídia ÷ Novos clientes</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#C8C6C4">Marketing</dd>
-          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600">Exclusões</dt><dd style="margin:0;color:#C8C6C4">Orgânico e indicações sem custo de mídia.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Métrica</dt><dd style="margin:0;font-weight:600">CAC</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Definição</dt><dd style="margin:0;color:#9FA8B7">Investimento em mídia dividido pelos novos clientes do período.</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Fórmula</dt><dd style="margin:0;font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">Investimento em mídia ÷ Novos clientes</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Dono da métrica</dt><dd style="margin:0;color:#9FA8B7">Marketing</dd>
+          <dt style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600">Exclusões</dt><dd style="margin:0;color:#9FA8B7">Orgânico e indicações sem custo de mídia.</dd>
         </dl>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">O que foi resolvido</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
             <li style="margin-bottom:6px">Revelou canal com menor CAC e maior conversão.</li>
             <li style="margin-bottom:6px">Corrigiu leitura de conversão com defasagem de 14 dias.</li>
             <li>Mapeou o funil completo de sessão a pagante.</li>
           </ul>
         </div>
         <div>
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F3F2F1;font-weight:700;margin-bottom:10px">Como foi feito</div>
-          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#C8C6C4">
-            <li style="margin-bottom:6px">Uni GA4 e Meta Ads por <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">merge</code> de canal e dia no Power Query.</li>
-            <li style="margin-bottom:6px">Conversão defasada com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">CALCULATE</code> + <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DATEADD</code> de 14 dias.</li>
-            <li style="margin-bottom:6px">CAC por canal com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">DIVIDE</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">F_Investimento</code>.</li>
-            <li>Funil com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#6aa9ff">SUMMARIZE</code> por etapa e canal.</li>
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#E7EAF0;font-weight:700;margin-bottom:10px">Como foi feito</div>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.5;color:#9FA8B7">
+            <li style="margin-bottom:6px">Uni GA4 e Meta Ads por <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">merge</code> de canal e dia no Power Query.</li>
+            <li style="margin-bottom:6px">Conversão defasada com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">CALCULATE</code> + <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">DATEADD</code> de 14 dias.</li>
+            <li style="margin-bottom:6px">CAC por canal com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">DIVIDE</code> sobre <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">F_Investimento</code>.</li>
+            <li>Funil com <code style="font-family:'Roboto Mono',monospace;font-size:12px;color:#4C9AFF">SUMMARIZE</code> por etapa e canal.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="gov" data-reveal style="padding:56px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Camada de governança</div>
-    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Relatórios não são arquivos soltos.</h2>
-    <p style="margin:0 0 24px;max-width:680px;font-size:15px;color:#C8C6C4;line-height:1.5">São ativos versionados, classificados e certificados. Cinco artefatos que provam a governança em vez de descrevê-la.</p>
+  <section id="gov" data-reveal style="padding:56px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(125,145,175,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Camada de governança</div>
+    <h2 style="margin:8px 0 6px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Relatórios não são arquivos soltos.</h2>
+    <p style="margin:0 0 24px;max-width:680px;font-size:15px;color:#9FA8B7;line-height:1.5">São ativos versionados, classificados e certificados. Cinco artefatos que provam a governança em vez de descrevê-la.</p>
 
-    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
-      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">1 · Linhagem de dados</div>
+    <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:14px">1 · Linhagem de dados</div>
       <div style="overflow-x:auto"><div data-slot="lineage" style="display:contents"></div></div>
     </div>
 
-    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
-      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">2 · Dicionário de métricas</div>
+    <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:14px">2 · Dicionário de métricas</div>
       <div style="overflow-x:auto"><div data-slot="dictionary" style="display:contents"></div></div>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px" data-gov-grid>
-      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px">
-        <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">3 · Qualidade de dados · dimensões DAMA</div>
+      <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:18px 20px">
+        <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:14px">3 · Qualidade de dados · dimensões DAMA</div>
         <div data-slot="dama" style="display:contents"></div>
       </div>
-      <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px">
-        <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">Regras de validação</div>
+      <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:18px 20px">
+        <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:14px">Regras de validação</div>
         <div data-slot="rules" style="display:contents"></div>
       </div>
     </div>
 
-    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
-      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">4 · Matriz de acesso e sensibilidade</div>
+    <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:18px 20px;margin-bottom:16px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:14px">4 · Matriz de acesso e sensibilidade</div>
       <div style="overflow-x:auto"><div data-slot="access" style="display:contents"></div></div>
-      <div style="margin-top:12px;font-size:12px;color:#C8C6C4;line-height:1.5;border-left:2px solid #118DFF;padding-left:12px">LGPD · dado pessoal aparece somente agregado; identificador direto (CPF, matrícula) não é publicado em relatório.</div>
+      <div style="margin-top:12px;font-size:12px;color:#9FA8B7;line-height:1.5;border-left:2px solid #1470B8;padding-left:12px">LGPD · dado pessoal aparece somente agregado; identificador direto (CPF, matrícula) não é publicado em relatório.</div>
     </div>
 
-    <div style="background:#252423;border:1px solid rgba(255,255,255,0.08);border-radius:2px;padding:18px 20px">
-      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#A19F9D;font-weight:600;margin-bottom:14px">5 · Ciclo de vida e mudança</div>
+    <div style="background:#121820;border:1px solid rgba(125,145,175,0.08);border-radius:2px;padding:18px 20px">
+      <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#7C8798;font-weight:600;margin-bottom:14px">5 · Ciclo de vida e mudança</div>
       <div style="overflow-x:auto"><div data-slot="lifecycle" style="display:contents"></div></div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px" data-lc-grid>
-        <div style="font-size:12.5px;color:#C8C6C4;line-height:1.45"><span style="display:block;font-weight:700;color:#F3F2F1;margin-bottom:2px">Workspaces separados</span>DEV, HML e PRD isolados por ambiente.</div>
-        <div style="font-size:12.5px;color:#C8C6C4;line-height:1.45"><span style="display:block;font-weight:700;color:#F3F2F1;margin-bottom:2px">Definição versionada</span>Modelo exportado e versionado em Git.</div>
-        <div style="font-size:12.5px;color:#C8C6C4;line-height:1.45"><span style="display:block;font-weight:700;color:#F3F2F1;margin-bottom:2px">Registro de mudança</span>Toda alteração de métrica com data e motivo.</div>
+        <div style="font-size:12.5px;color:#9FA8B7;line-height:1.45"><span style="display:block;font-weight:700;color:#E7EAF0;margin-bottom:2px">Workspaces separados</span>DEV, HML e PRD isolados por ambiente.</div>
+        <div style="font-size:12.5px;color:#9FA8B7;line-height:1.45"><span style="display:block;font-weight:700;color:#E7EAF0;margin-bottom:2px">Definição versionada</span>Modelo exportado e versionado em Git.</div>
+        <div style="font-size:12.5px;color:#9FA8B7;line-height:1.45"><span style="display:block;font-weight:700;color:#E7EAF0;margin-bottom:2px">Registro de mudança</span>Toda alteração de métrica com data e motivo.</div>
       </div>
     </div>
   </section>
 
-  <section id="skills" data-reveal style="padding:56px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(255,255,255,0.08)">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Competências técnicas</div>
-    <h2 style="margin:8px 0 22px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Stack</h2>
+  <section id="skills" data-reveal style="padding:56px 0 8px;scroll-margin-top:64px;border-top:1px solid rgba(125,145,175,0.08)">
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Competências técnicas</div>
+    <h2 style="margin:8px 0 22px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Stack</h2>
     <div data-slot="skills" style="display:contents"></div>
   </section>
 
   <section data-reveal style="padding:48px 0 8px">
-    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6aa9ff;text-transform:uppercase;font-weight:500">Como eu trabalho</div>
-    <h2 style="margin:8px 0 22px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#F3F2F1">Comportamentais</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:2px;overflow:hidden">
-      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Problema antes da ferramenta</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Mapeio a pergunta de negócio e o dado disponível antes de abrir o Power BI.</div></div>
-      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Regra de negócio em modelo</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Traduzo política de comissão e desconto em medidas DAX auditáveis.</div></div>
-      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Documentar para quem herda</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Deixo dicionário e linhagem para o próximo analista assumir sem mim.</div></div>
-      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Questionar o número que não fecha</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Rastreei divergência de 2,3% na receita até um join duplicando notas.</div></div>
-      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Autonomia como único analista</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Fui o único responsável por ETL, modelo, relatório e atendimento da área.</div></div>
-      <div style="background:#252423;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#F3F2F1">Comunicação com quem decide</div><div style="font-size:13px;color:#A19F9D;line-height:1.45">Apresento variação em p.p. e R$, não em jargão técnico, para a diretoria.</div></div>
+    <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.14em;color:#4C9AFF;text-transform:uppercase;font-weight:500">Como eu trabalho</div>
+    <h2 style="margin:8px 0 22px;font-size:clamp(26px,3.4vw,38px);font-weight:700;letter-spacing:-0.02em;color:#E7EAF0">Comportamentais</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(125,145,175,0.08);border:1px solid rgba(125,145,175,0.08);border-radius:2px;overflow:hidden">
+      <div style="background:#121820;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#E7EAF0">Problema antes da ferramenta</div><div style="font-size:13px;color:#7C8798;line-height:1.45">Mapeio a pergunta de negócio e o dado disponível antes de abrir o Power BI.</div></div>
+      <div style="background:#121820;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#E7EAF0">Regra de negócio em modelo</div><div style="font-size:13px;color:#7C8798;line-height:1.45">Traduzo política de comissão e desconto em medidas DAX auditáveis.</div></div>
+      <div style="background:#121820;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#E7EAF0">Documentar para quem herda</div><div style="font-size:13px;color:#7C8798;line-height:1.45">Deixo dicionário e linhagem para o próximo analista assumir sem mim.</div></div>
+      <div style="background:#121820;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#E7EAF0">Questionar o número que não fecha</div><div style="font-size:13px;color:#7C8798;line-height:1.45">Rastreei divergência de 2,3% na receita até um join duplicando notas.</div></div>
+      <div style="background:#121820;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#E7EAF0">Autonomia como único analista</div><div style="font-size:13px;color:#7C8798;line-height:1.45">Fui o único responsável por ETL, modelo, relatório e atendimento da área.</div></div>
+      <div style="background:#121820;padding:18px 20px"><div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#E7EAF0">Comunicação com quem decide</div><div style="font-size:13px;color:#7C8798;line-height:1.45">Apresento variação em p.p. e R$, não em jargão técnico, para a diretoria.</div></div>
     </div>
   </section>
 
 </main>
 
-<footer style="border-top:1px solid rgba(255,255,255,0.08);background:#141312;color:#A19F9D;padding:28px 24px">
+<footer style="border-top:1px solid rgba(125,145,175,0.08);background:#080B10;color:#7C8798;padding:28px 24px">
   <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:12.5px">
-    <div>Matheus Nascimento · Analista de BI · Rio de Janeiro · <a href="mailto:matheusnascimento8e7@gmail.com" style="color:#6aa9ff">matheusnascimento8e7@gmail.com</a></div>
-    <div style="color:#7a7876">Empresas e dados dos cases são fictícios, criados apenas para demonstração.</div>
+    <div>Matheus Nascimento · Analista de BI · Rio de Janeiro · <a href="mailto:matheusnascimento8e7@gmail.com" style="color:#4C9AFF">matheusnascimento8e7@gmail.com</a></div>
+    <div style="color:#525C6B">Empresas e dados dos cases são fictícios, criados apenas para demonstração.</div>
   </div>
 </footer>
 </main>
 <script>
 class Component extends DCLogic {
   S=['#3B82F6','#818CF8','#F59E0B','#A78BFA','#F472B6','#22D3EE','#FBBF24','#FB7185'];
-  POS='#34D399'; NEG='#FB7185'; GRID='#243244'; AXIS='#3A4A5E'; INK='#F3F2F1'; SUB='#A19F9D';
-  OUTER='#0D1017'; CANVAS='#121721'; PANEL='#18202C'; ALT='#1F2836'; SLIC='#161D28'; SLICA='#24303F'; EMPTY='#243244';
-  MONO="'Roboto Mono',monospace"; FONT="'Segoe UI','Open Sans',system-ui,sans-serif";
+  POS='#34D399'; NEG='#FB7185'; GRID='#1C2534'; AXIS='#2E3B4C'; INK='#E7EAF0'; SUB='#7C8798';
+  OUTER='#0A0E14'; CANVAS='#0E131B'; PANEL='#141B24'; ALT='#1A222C'; SLIC='#121820'; SLICA='#1E2733'; EMPTY='#1C2534';
+  MONO="'Roboto Mono',monospace"; FONT="'Inter','Segoe UI',system-ui,sans-serif";
   state={ tab:{ fin:'geral', rh:'geral', log:'geral', mkt:'geral' } };
 
   componentDidMount(){
     const tip=document.createElement('div');
-    Object.assign(tip.style,{position:'fixed',zIndex:9999,pointerEvents:'none',display:'none',background:'#0D1017',border:'1px solid #2C3B4F',borderRadius:'2px',padding:'8px 10px',font:"12px "+this.FONT,color:'#F3F2F1',boxShadow:'0 6px 20px rgba(0,0,0,0.55)',maxWidth:'260px',lineHeight:'1.35'});
+    Object.assign(tip.style,{position:'fixed',zIndex:9999,pointerEvents:'none',display:'none',background:'#0A0E14',border:'1px solid #26313F',borderRadius:'2px',padding:'8px 10px',font:"12px "+this.FONT,color:'#E7EAF0',boxShadow:'0 6px 20px rgba(0,0,0,0.55)',maxWidth:'260px',lineHeight:'1.35'});
     document.body.appendChild(tip); this.tipEl=tip;
     this.animateVisible=this.animateVisible.bind(this);
     window.addEventListener('scroll',this.animateVisible,{passive:true});
@@ -514,8 +515,8 @@ class Component extends DCLogic {
 
   mk(title,rows){ return {onMouseMove:e=>this.showTip(e,title,rows),onMouseLeave:()=>this.hideTip(),style:{cursor:'pointer'}}; }
   showTip(e,title,rows){ const el=this.tipEl; if(!el)return;
-    let html='<div style="font-weight:600;margin-bottom:5px;color:#F3F2F1;font-family:'+this.FONT+'">'+title+'</div>';
-    rows.forEach(r=>{ html+='<div style="display:flex;align-items:center;gap:7px;margin-top:2px"><span style="width:8px;height:8px;border-radius:1px;flex:0 0 auto;background:'+(r[2]||'#8a8886')+'"></span><span style="color:#C8C6C4">'+r[0]+'</span><span style="margin-left:auto;padding-left:14px;font-variant-numeric:tabular-nums;font-weight:600;color:#F3F2F1">'+r[1]+'</span></div>'; });
+    let html='<div style="font-weight:600;margin-bottom:5px;color:#E7EAF0;font-family:'+this.FONT+'">'+title+'</div>';
+    rows.forEach(r=>{ html+='<div style="display:flex;align-items:center;gap:7px;margin-top:2px"><span style="width:8px;height:8px;border-radius:1px;flex:0 0 auto;background:'+(r[2]||'#67707E')+'"></span><span style="color:#9FA8B7">'+r[0]+'</span><span style="margin-left:auto;padding-left:14px;font-variant-numeric:tabular-nums;font-weight:600;color:#E7EAF0">'+r[1]+'</span></div>'; });
     el.innerHTML=html; el.style.display='block'; this.moveTip(e); }
   moveTip(e){ const el=this.tipEl; if(!el)return; const pad=14, w=el.offsetWidth, hh=el.offsetHeight;
     let x=e.clientX+pad, y=e.clientY+pad;
@@ -529,7 +530,7 @@ class Component extends DCLogic {
     return React.createElement('div',{className:'chartwrap',style:{width:'100%',aspectRatio:w+' / '+h,fontFamily:this.FONT}},inner);
   }
   icons(){
-    const h=React.createElement, C='#8a8886';
+    const h=React.createElement, C='#67707E';
     const mk=(k,p)=>React.createElement('svg',{key:k,width:13,height:13,viewBox:'0 0 16 16',style:{opacity:.85}},p);
     const filter=mk('f',h('path',{d:'M2 3h12l-4.5 5.5V13L6.5 11V8.5L2 3z',fill:'none',stroke:C,strokeWidth:1.2,strokeLinejoin:'round'}));
     const focus=mk('o',h('path',{d:'M2 6V2h4M14 6V2h-4M2 10v4h4M14 10v4h-4',fill:'none',stroke:C,strokeWidth:1.2}));
@@ -781,7 +782,7 @@ class Component extends DCLogic {
 
   dictionary(){
     const h=React.createElement;
-    const chip=(t)=>{const m={c:['rgba(85,185,106,0.16)','#7fd69a','Certificada'],r:['rgba(230,200,77,0.16)','#e6c84d','Em revis\u00e3o'],d:['rgba(161,159,157,0.15)','#A19F9D','Descontinuada']};const s=m[t];
+    const chip=(t)=>{const m={c:['rgba(85,185,106,0.16)','#7fd69a','Certificada'],r:['rgba(230,200,77,0.16)','#e6c84d','Em revis\u00e3o'],d:['rgba(161,159,157,0.15)','#7C8798','Descontinuada']};const s=m[t];
       return h('span',{style:{display:'inline-block',padding:'2px 8px',borderRadius:2,fontSize:10.5,fontWeight:600,background:s[0],color:s[1]}},s[2]);};
     const rows=[
       ['Margem bruta','(Receita l\u00edq. \u2212 CMV) \u00f7 Receita l\u00edq.','Item \u00b7 dia','Controladoria','c'],
@@ -798,14 +799,14 @@ class Component extends DCLogic {
       h('thead',{key:'h'},h('tr',null,head.map((c,i)=>h('th',{key:i,style:{textAlign:'left',padding:'0 10px 6px',fontSize:10,letterSpacing:'.04em',textTransform:'uppercase',color:this.SUB,fontWeight:600,borderBottom:'1.5px solid '+this.AXIS}},c)))),
       h('tbody',{key:'b'},rows.map((r,ri)=>h('tr',{key:ri,style:{background:ri%2?this.ALT:this.PANEL}},[
         h('td',{key:0,style:{padding:'7px 10px',fontSize:12.5,fontWeight:600,color:this.INK,whiteSpace:'nowrap'}},r[0]),
-        h('td',{key:1,style:{padding:'7px 10px',fontSize:11.5,fontFamily:this.MONO,color:'#6aa9ff'}},r[1]),
+        h('td',{key:1,style:{padding:'7px 10px',fontSize:11.5,fontFamily:this.MONO,color:'#4C9AFF'}},r[1]),
         h('td',{key:2,style:{padding:'7px 10px',fontSize:12,color:this.SUB,whiteSpace:'nowrap'}},r[2]),
         h('td',{key:3,style:{padding:'7px 10px',fontSize:12,color:this.SUB,whiteSpace:'nowrap'}},r[3]),
         h('td',{key:4,style:{padding:'7px 10px'}},chip(r[4]))])))]);
   }
   access(){
     const h=React.createElement;
-    const cls=(t)=>{const m={pub:['rgba(58,160,255,0.16)','#6aa9ff','P\u00fablico'],int:['rgba(91,111,224,0.24)','#9aa6f0','Interno'],conf:['rgba(230,200,77,0.16)','#e6c84d','Confidencial'],rest:['rgba(224,108,117,0.16)','#f0919a','Restrito']};const s=m[t];
+    const cls=(t)=>{const m={pub:['rgba(58,160,255,0.16)','#4C9AFF','P\u00fablico'],int:['rgba(91,111,224,0.24)','#9aa6f0','Interno'],conf:['rgba(230,200,77,0.16)','#e6c84d','Confidencial'],rest:['rgba(224,108,117,0.16)','#f0919a','Restrito']};const s=m[t];
       return h('span',{style:{display:'inline-block',padding:'2px 8px',borderRadius:2,fontSize:10.5,fontWeight:600,background:s[0],color:s[1]}},s[2]);};
     const rows=[
       ['Financeiro','conf','Sim \u2014 por centro de custo','Controladoria \u00b7 Diretoria'],
@@ -831,18 +832,18 @@ class Component extends DCLogic {
       ['Python',[['pandas',1],['ETL',1],['requests / APIs',1],['Automação de rotinas',1],['FastAPI',0],['Playwright / scraping',0]]],
       ['Automações e dados',[['Integração via webhook',1],['Google Sheets API',1],['cron / agendamento',1],['Versionamento com Git',1],['Documentação de modelo',1]]],
       ['Governança de dados',[['Dicionário de dados',1],['Catálogo e linhagem',1],['Qualidade (DAMA)',1],['RLS e controle de acesso',1],['Classificação de sensibilidade',1],['LGPD em relatórios',1],['Ciclo DEV/HML/PRD',1],['Certificação de datasets',1],['Gestão de mudança de métrica',1]]]];
-    const chip=(txt,core)=>h('span',{key:txt,style:{fontSize:12,padding:'4px 9px',borderRadius:2,color:core?this.INK:'#C8C6C4',background:core?'rgba(17,141,255,0.12)':'transparent',border:core?'1px solid rgba(17,141,255,0.35)':'1px solid rgba(255,255,255,0.14)'}},txt);
-    const sub=(label)=>h('div',{key:label,style:{fontSize:9.5,letterSpacing:'.07em',textTransform:'uppercase',color:'#8a8886',fontWeight:600,margin:'2px 0 8px'}},label);
+    const chip=(txt,core)=>h('span',{key:txt,style:{fontSize:12,padding:'4px 9px',borderRadius:2,color:core?this.INK:'#9FA8B7',background:core?'rgba(17,141,255,0.12)':'transparent',border:core?'1px solid rgba(17,141,255,0.35)':'1px solid rgba(125,145,175,0.14)'}},txt);
+    const sub=(label)=>h('div',{key:label,style:{fontSize:9.5,letterSpacing:'.07em',textTransform:'uppercase',color:'#67707E',fontWeight:600,margin:'2px 0 8px'}},label);
     return h('div',{},[
-      h('div',{key:'leg',style:{display:'flex',gap:16,flexWrap:'wrap',marginBottom:16,fontSize:11.5,color:'#A19F9D',alignItems:'center'}},[
+      h('div',{key:'leg',style:{display:'flex',gap:16,flexWrap:'wrap',marginBottom:16,fontSize:11.5,color:'#7C8798',alignItems:'center'}},[
         h('span',{key:'a',style:{display:'inline-flex',alignItems:'center',gap:7}},[h('span',{key:'d',style:{width:11,height:11,borderRadius:2,background:'rgba(17,141,255,0.12)',border:'1px solid rgba(17,141,255,0.35)'}}),'Uso recorrente no dia a dia']),
-        h('span',{key:'b',style:{display:'inline-flex',alignItems:'center',gap:7}},[h('span',{key:'d',style:{width:11,height:11,borderRadius:2,background:'transparent',border:'1px solid rgba(255,255,255,0.14)'}}),'Já apliquei em projetos'])
+        h('span',{key:'b',style:{display:'inline-flex',alignItems:'center',gap:7}},[h('span',{key:'d',style:{width:11,height:11,borderRadius:2,background:'transparent',border:'1px solid rgba(125,145,175,0.14)'}}),'Já apliquei em projetos'])
       ]),
       h('div',{key:'grid',style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:16}},
         groups.map((g,gi)=>{
           const core=g[1].filter(it=>it[1]===1), sec=g[1].filter(it=>it[1]===0);
-          return h('div',{key:gi,style:{background:this.PANEL,border:'1px solid rgba(255,255,255,0.08)',borderRadius:2,padding:'16px 18px'}},[
-            h('div',{key:'t',style:{fontSize:13,fontWeight:700,color:this.INK,marginBottom:12,paddingBottom:8,borderBottom:'1px solid rgba(255,255,255,0.08)'}},g[0]),
+          return h('div',{key:gi,style:{background:this.PANEL,border:'1px solid rgba(125,145,175,0.08)',borderRadius:2,padding:'16px 18px'}},[
+            h('div',{key:'t',style:{fontSize:13,fontWeight:700,color:this.INK,marginBottom:12,paddingBottom:8,borderBottom:'1px solid rgba(125,145,175,0.08)'}},g[0]),
             core.length?sub('Uso recorrente'):null,
             core.length?h('div',{key:'c',style:{display:'flex',flexWrap:'wrap',gap:6,marginBottom:sec.length?14:0}},core.map(it=>chip(it[0],true))):null,
             sec.length?sub('Já apliquei'):null,
@@ -969,7 +970,7 @@ class Component extends DCLogic {
   rules(){
     const h=React.createElement;
     const list=[{t:'Data de desligamento \u2265 data de admiss\u00e3o',p:100},{t:'Matr\u00edcula \u00fanica por colaborador',p:99.7},{t:'Centro de custo preenchido',p:98.2},{t:'Rota com CEP de destino v\u00e1lido',p:96.4}];
-    return h('div',{style:{display:'flex',flexDirection:'column',gap:10}},list.map((r,i)=>h('div',{key:i,style:{display:'flex',alignItems:'baseline',gap:10,fontSize:13,paddingBottom:8,borderBottom:i<list.length-1?'1px solid rgba(255,255,255,0.07)':'none'}},[
+    return h('div',{style:{display:'flex',flexDirection:'column',gap:10}},list.map((r,i)=>h('div',{key:i,style:{display:'flex',alignItems:'baseline',gap:10,fontSize:13,paddingBottom:8,borderBottom:i<list.length-1?'1px solid rgba(125,145,175,0.07)':'none'}},[
       h('span',{key:'t',style:{flex:1,fontFamily:this.MONO,fontSize:11.5,color:this.INK,lineHeight:1.4}},r.t),
       h('span',{key:'p',style:{fontVariantNumeric:'tabular-nums',fontWeight:700,color:r.p>=99?this.POS:(r.p>=97?this.S[6]:this.NEG)}},this.nf(r.p,1)+'%')])));
   }
